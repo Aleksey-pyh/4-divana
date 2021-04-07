@@ -509,6 +509,7 @@ footer a:hover{
     background: white;
     width: 100%;
     border: 1px solid #0F0F0F;
+    cursor: pointer;
 }
 .ready__filter__select__list__item:hover{
     background-color: #6D8953;
@@ -523,6 +524,10 @@ footer a:hover{
     justify-content: flex-start;
     margin-bottom: 65px;
 }
+.ready__ligth:hover{
+    text-decoration: none;
+    color: #6D8953;
+}
 .animate{
     opacity: 1;
     transition: all 0.7s;
@@ -533,6 +538,16 @@ footer a:hover{
     width: 0%;
     max-width: 0%;
     padding: 0!important;
+}
+.animate p{
+    font-size: 14px;
+    line-height: 104.7%;
+    color: #0F0F0F;
+    margin-top: 18px;
+    margin-bottom: 29px;
+}
+.animate p:hover{
+    color: #6D8953;
 }
 .filter_row{
     min-height: 485px;
@@ -551,5 +566,14 @@ footer a:hover{
     width: 100%;
     padding: 0 15px;
     opacity: 1;
+}
+.ready__filter__select__list__item.hide{
+    display: none;
+}
+.ready__filter__select__list.left{
+    border-width: 0px 0 1px 1px;
+}
+.ready__filter__select__list.right{
+    border-width: 0px 1px 1px 0px;
 }
 /*ready e*/

@@ -117,8 +117,8 @@ $('.haveChildren').on('click',function(){
     })
     //Скрипт фильтра на странице готовых товаров
     $('.ready__filter').on('click',function(){
-        list=$(this).find('.ready__filter__select__list')
-        overflow=$(this).find('.ready__filter__overflow')
+        list=$(this).find('.ready__filter__select__list');
+        overflow=$(this).find('.ready__filter__overflow');
         par=$(this).find('.ready__filter__head');
         if($(par).hasClass('active')){
         $(list).removeClass('active');
@@ -132,6 +132,21 @@ $('.haveChildren').on('click',function(){
             $(list).addClass('active');
         }
     });
+    $(document).click( function(e){
+        if ( $(e.target).closest('.ready__filter').length ) {
+            // клик внутри элемента 
+            return;
+        }
+        // клик снаружи элемента 
+        $('.ready__filter').each(function(){
+            list=$(this).find('.ready__filter__select__list');
+            overflow=$(this).find('.ready__filter__overflow');
+            par=$(this).find('.ready__filter__head');
+            $(list).removeClass('active');
+            $(overflow).removeClass('active');
+            $(par).removeClass('active');
+        });
+    });
     //фильтр по материалу
     $('.mat').on('click',function(){
         filterMat=$(this).text();
@@ -140,11 +155,13 @@ $('.haveChildren').on('click',function(){
             $(this).removeClass('select');
             filter(filterCol,'');
             changeHead('matHead','Материал');
+            filterColorList('all');
         }else{
         $('.mat').each(function(){
             $(this).removeClass('select');
         });
         $(this).addClass('select');
+        filterColorList(filterMat);
         changeHead('matHead',filterMat);
         filter(filterCol,filterMat);
         }
@@ -157,6 +174,7 @@ $('.haveChildren').on('click',function(){
         $('.mat').each(function(){
             $(this).removeClass('select');
         });
+        filterColorList('all');
     });
     //фильтр по цвету
     $('.colfill').on('click',function(){
@@ -166,6 +184,7 @@ $('.haveChildren').on('click',function(){
             $(this).removeClass('select');
             filter("",filterMar);
             changeHead('colfillHead','Цвет');
+            filterMatList('all');
         }else{
         $('.colfill').each(function(){
             $(this).removeClass('select');
@@ -173,6 +192,7 @@ $('.haveChildren').on('click',function(){
         $(this).addClass('select');
         changeHead('colfillHead',filterCol);
         filter(filterCol,filterMar);
+        filterMatList(filterCol);
         }
     });
     //Сброс по цвету
@@ -183,8 +203,9 @@ $('.haveChildren').on('click',function(){
         $('.colfill').each(function(){
             $(this).removeClass('select');
         });
+        filterMatList('all');
     });
-    filter = (function(c,m){
+    let filter = (function(c,m){
         $('.animate').each(function(){
             if(m && c){
                 if($(this).attr('data-color')==c && $(this).attr('data-material')==m){
@@ -210,7 +231,7 @@ $('.haveChildren').on('click',function(){
         })
         showMessage();
     });
-    showMessage = (function(){
+    let showMessage = (function(){
         elementList =Array.from(document.querySelectorAll('.animate')) ;
         if(elementList.every( currentValue => currentValue.classList.contains('hide'))){
             $('.hideText').addClass('active');
@@ -218,14 +239,57 @@ $('.haveChildren').on('click',function(){
             $('.hideText').removeClass('active');
         }
     });
-    changeHead = (function(className,str){
+    let changeHead = (function(className,str){
             $('.'+className+'').html(str);
     })
-
-
-    $( document ).ready(function() {
+    let filterColorList = (function(material){
+        $('.colfill').each(function(){
+            $(this).addClass('hide');
+        })
+        if(material=='all'){
+            $('.colfill').each(function(){
+                $(this).removeClass('hide');
+            })
+        }
+        $('.animate').each(function(){
+            if($(this).attr('data-material')==material){
+                color=$(this).attr('data-color');
+                $('.colfill').each(function(){
+                    if($(this).text()==color){
+                        $(this).removeClass('hide');
+                    }
+                })
+            }
+        });
+        changeHiethList();
+    });
+    let filterMatList = (function(color){
+        $('.mat').each(function(){
+            $(this).addClass('hide');
+        })
+        if(color=='all'){
+            $('.mat').each(function(){
+                $(this).removeClass('hide');
+            })
+        }
+        $('.animate').each(function(){
+            if($(this).attr('data-color')==color){
+                mat=$(this).attr('data-material');
+                $('.mat').each(function(){
+                    if($(this).text()==mat){
+                        $(this).removeClass('hide');
+                    }
+                })
+            }
+        });
+        changeHiethList();
+    });
+    let changeHiethList = (function(){
         $('.ready__filter__overflow').each(function(){
-            heigth=$(this).height() - 1;
+            heigth=$(this).height();
             $(this).css('bottom',0-heigth);
         });
+    });
+    $( document ).ready(function() {
+        changeHiethList();
     })
