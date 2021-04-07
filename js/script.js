@@ -138,14 +138,25 @@ $('.haveChildren').on('click',function(){
         filterCol=$('.colfill.select').text();
         if($(this).hasClass('select')){
             $(this).removeClass('select');
-            filterByColor(filterCol,'');
+            filter(filterCol,'');
+            changeHead('matHead','Материал');
         }else{
         $('.mat').each(function(){
             $(this).removeClass('select');
         });
         $(this).addClass('select');
-        filterByColor(filterCol,filterMat);
+        changeHead('matHead',filterMat);
+        filter(filterCol,filterMat);
         }
+    });
+    //Сброс по материалу
+    $('.sbrosmat').on('click',function(){
+        changeHead('matHead','Материал');
+        filterCol=$('.colfill.select').text();
+        filter(filterCol,'');
+        $('.mat').each(function(){
+            $(this).removeClass('select');
+        });
     });
     //фильтр по цвету
     $('.colfill').on('click',function(){
@@ -153,16 +164,27 @@ $('.haveChildren').on('click',function(){
         filterMar=$('.mat.select').text();
         if($(this).hasClass('select')){
             $(this).removeClass('select');
-            filterByColor("",filterMar);
+            filter("",filterMar);
+            changeHead('colfillHead','Цвет');
         }else{
         $('.colfill').each(function(){
             $(this).removeClass('select');
         });
         $(this).addClass('select');
-        filterByColor(filterCol,filterMar);
+        changeHead('colfillHead',filterCol);
+        filter(filterCol,filterMar);
         }
     });
-    filterByColor = (function(c,m){
+    //Сброс по цвету
+    $('.sbroscol').on('click',function(){
+        changeHead('colfillHead','Цвет');
+        filterMar=$('.mat.select').text();
+        filter("",filterMar);
+        $('.colfill').each(function(){
+            $(this).removeClass('select');
+        });
+    });
+    filter = (function(c,m){
         $('.animate').each(function(){
             if(m && c){
                 if($(this).attr('data-color')==c && $(this).attr('data-material')==m){
@@ -196,7 +218,9 @@ $('.haveChildren').on('click',function(){
             $('.hideText').removeClass('active');
         }
     });
-
+    changeHead = (function(className,str){
+            $('.'+className+'').html(str);
+    })
 
 
     $( document ).ready(function() {
