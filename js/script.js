@@ -8,6 +8,9 @@
 //     arrows:false,
 //     dots:true
 // });
+
+
+//скрипт для шапки start
 $('.haveChildren').on('click',function(){
     height = $(this).find('.sub').height();
     padTop = parseInt($('.fadeForMenu').css('padding-top'));
@@ -34,7 +37,10 @@ $('.haveChildren').on('click',function(){
         $(this).addClass('active');
     }
 });
-    
+//скрипт для шапки end
+
+
+//Скрипты для первого экрана на главной start
   $('.firstScreen__slider__rigth').slick({
     slidesToShow: 1,
     slidesToScroll: 1,
@@ -99,3 +105,103 @@ $('.haveChildren').on('click',function(){
     }, function(){ 
         $('.goCatalog').css('background-color','transparent');
     });
+    //Скрипты для первого экрана на главной end
+
+    //Скрипты отзывов
+    $('.review__slider').slick({
+        slidesToShow: 3,
+        slidesToScroll: 3,
+        dots:true,
+        nextArrow:$('.next'),
+        prevArrow:$('.prev'),
+    })
+    //Скрипт фильтра на странице готовых товаров
+    $('.ready__filter').on('click',function(){
+        list=$(this).find('.ready__filter__select__list')
+        overflow=$(this).find('.ready__filter__overflow')
+        par=$(this).find('.ready__filter__head');
+        if($(par).hasClass('active')){
+        $(list).removeClass('active');
+        setTimeout(function(){
+            $(overflow).removeClass('active');
+            $(par).removeClass('active');
+          }, 600);
+        }else{
+            $(par).addClass('active');
+            $(overflow).addClass('active');
+            $(list).addClass('active');
+        }
+    });
+    //фильтр по материалу
+    $('.mat').on('click',function(){
+        filterMat=$(this).text();
+        filterCol=$('.colfill.select').text();
+        if($(this).hasClass('select')){
+            $(this).removeClass('select');
+            filterByColor(filterCol,'');
+        }else{
+        $('.mat').each(function(){
+            $(this).removeClass('select');
+        });
+        $(this).addClass('select');
+        filterByColor(filterCol,filterMat);
+        }
+    });
+    //фильтр по цвету
+    $('.colfill').on('click',function(){
+        filterCol=$(this).text();
+        filterMar=$('.mat.select').text();
+        if($(this).hasClass('select')){
+            $(this).removeClass('select');
+            filterByColor("",filterMar);
+        }else{
+        $('.colfill').each(function(){
+            $(this).removeClass('select');
+        });
+        $(this).addClass('select');
+        filterByColor(filterCol,filterMar);
+        }
+    });
+    filterByColor = (function(c,m){
+        $('.animate').each(function(){
+            if(m && c){
+                if($(this).attr('data-color')==c && $(this).attr('data-material')==m){
+                    $(this).removeClass('hide');
+                }else{
+                    $(this).addClass('hide');
+                }
+            }else if(m){
+                if($(this).attr('data-material')==m){
+                    $(this).removeClass('hide');
+                }else{
+                    $(this).addClass('hide');
+                }
+            }else if(c){
+                if($(this).attr('data-color')==c){
+                    $(this).removeClass('hide');
+                }else{
+                    $(this).addClass('hide');
+                }
+            }else{
+                $(this).removeClass('hide');
+            }
+        })
+        showMessage();
+    });
+    showMessage = (function(){
+        elementList =Array.from(document.querySelectorAll('.animate')) ;
+        if(elementList.every( currentValue => currentValue.classList.contains('hide'))){
+            $('.hideText').addClass('active');
+        }else{
+            $('.hideText').removeClass('active');
+        }
+    });
+
+
+
+    $( document ).ready(function() {
+        $('.ready__filter__overflow').each(function(){
+            heigth=$(this).height() - 1;
+            $(this).css('bottom',0-heigth);
+        });
+    })
