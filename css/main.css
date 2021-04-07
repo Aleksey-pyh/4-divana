@@ -576,4 +576,37 @@ footer a:hover{
 .ready__filter__select__list.right{
     border-width: 0px 1px 1px 0px;
 }
+.ready__goCatalog{
+    display: block;
+    max-width: max-content;
+    margin: 56px auto 92px;
+    padding: 23px 71px;
+    color: white;
+    background: #0F0F0F;
+}
+.ready__goCatalog:hover{
+    color: white;
+    background: #6D8953;
+    text-decoration: none;
+}
+.ready__subscribe{
+    margin-bottom: 86px;
+}
 /*ready e*/
+/*detail*/
+/*карточка товара*/
+.short__info{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    margin: 51px 0 30px;
+}
+.param{
+    color: #606060;
+    font-size: 16px;
+    font-weight: 400;
+}
+.param .harakteristika{
+    font-weight: 600;
+    color: #303030;
+}
