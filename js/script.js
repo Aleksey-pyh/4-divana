@@ -292,4 +292,196 @@ $('.haveChildren').on('click',function(){
     });
     $( document ).ready(function() {
         changeHiethList();
+    });
+    //Скрипты детальной страницы
+    $('.razvernyt__head').on('click',function(){
+        $('.razvernyt__body').toggleClass('active');
+    });
+    $('.filter__slider').slick({
+        arrow:false,
+        dots:false,
+        draggable:false,
     })
+    $('.navForFiltersSlider').on('click',function(){
+        $('.filter__slider').slick('slickGoTo',$(this).attr('data-slide'));
+        $('.navForFiltersSlider').each(function(){
+            $(this).removeClass('active');
+        });
+        $(this).addClass('active');
+    });
+    // $('.product__list').slick({
+    //     rows:3,
+    //     slidesToShow: 6,
+    // })
+    //Фильтр детальной для десктопа
+    //Фильтр материалов
+    $('.matFill').on('click',function(){
+        filterMat=$(this).text().trim();
+        filterCol=$('.colorFill.select').text().trim();
+        filterCoast=$('.coastFill.select').text().trim();
+        if($(this).hasClass('select')){
+            $(this).removeClass('select');
+            filterDetail('',filterCol,filterCoast);
+            changeHead('matHead','Материал');
+        }else{
+        $('.matFill').each(function(){
+            $(this).removeClass('select');
+        });
+        $(this).addClass('select');
+        changeHead('matHead',filterMat);
+        filterDetail(filterMat,filterCol,filterCoast);
+        }
+        filterList();
+    })
+    //фильтр цвета
+    $('.colorFill').on('click',function(){
+        filterMat=$('.matFill.select').text().trim();
+        filterCol=$(this).text().trim();
+        filterCoast=$('.coastFill.select').text().trim();
+        if($(this).hasClass('select')){
+            $(this).removeClass('select');
+            filterDetail(filterMat,'',filterCoast);
+            changeHead('colHead','Цвет');
+        }else{
+        $('.colorFill').each(function(){
+            $(this).removeClass('select');
+        });
+        $(this).addClass('select');
+        changeHead('colHead',filterCol);
+        filterDetail(filterMat,filterCol,filterCoast);
+        }
+        filterList();
+    })
+    //фильтр цены
+    $('.coastFill').on('click',function(){
+        filterMat=$('.matFill.select').text().trim();
+        filterCol=$('.colorFill.select').text().trim();
+        filterCoast=$(this).text().trim();
+        if($(this).hasClass('select')){
+            $(this).removeClass('select');
+            filterDetail(filterMat,filterCol,'');
+            changeHead('coastHead','Цена');
+        }else{
+        $('.coastFill').each(function(){
+            $(this).removeClass('select');
+        });
+        $(this).addClass('select');
+        changeHead('coastHead',filterCoast);
+        filterDetail(filterMat,filterCol,filterCoast);
+        }
+        filterList();
+    });
+    //Сбросы
+    $('.sbrosMat').on('click',function(){
+        filterCol=$('.colorFill.select').text().trim();
+        filterCoast=$('.coastFill.select').text().trim();
+        $('.matFill').each(function(){
+            $(this).removeClass('select');
+        });
+        filterDetail('',filterCol,filterCoast);
+        changeHead('matHead','Материал');
+        filterList();
+    });
+    $('.sbrosColor').on('click',function(){
+        filterMat=$('.matFill.select').text().trim();
+        filterCoast=$('.coastFill.select').text().trim();
+        $('.colorFill').each(function(){
+            $(this).removeClass('select');
+        });
+        filterDetail(filterMat,'',filterCoast);
+        changeHead('colHead','Цвет');
+        filterList();
+    });
+    $('.sbrosCoast').on('click',function(){
+        filterCol=$('.colorFill.select').text().trim();
+        filterMat=$('.matFill.select').text().trim();
+        $('.coastFill').each(function(){
+            $(this).removeClass('select');
+        });
+        filterDetail(filterMat,filterCol,'');
+        changeHead('coastHead','Цена');
+        filterList();
+    });
+    let filterDetail = (function(material,color,coast){
+        $('.product__item').each(function(){
+            if(material && color && coast){
+                if($(this).attr('data-color')==color && $(this).attr('data-material')==material && $(this).attr('data-coast')==coast){
+                    $(this).removeClass('hide');
+                }else{
+                    $(this).addClass('hide');
+                }
+            }else if(material && color){
+                if($(this).attr('data-color')==color && $(this).attr('data-material')==material){
+                    $(this).removeClass('hide');
+                }else{
+                    $(this).addClass('hide');
+                }
+            }else if(material && coast){
+                if($(this).attr('data-coast')==coast && $(this).attr('data-material')==material){
+                    $(this).removeClass('hide');
+                }else{
+                    $(this).addClass('hide');
+                }
+            }else if(color && coast){
+                if($(this).attr('data-coast')==coast && $(this).attr('data-color')==color){
+                    $(this).removeClass('hide');
+                }else{
+                    $(this).addClass('hide');
+                }
+            }else if(color){
+                if($(this).attr('data-color')==color){
+                    $(this).removeClass('hide');
+                }else{
+                    $(this).addClass('hide');
+                }
+            }else if(coast){
+                if($(this).attr('data-coast')==coast){
+                    $(this).removeClass('hide');
+                }else{
+                    $(this).addClass('hide');
+                }
+            }else if(material){
+                if($(this).attr('data-material')==material){
+                    $(this).removeClass('hide');
+                }else{
+                    $(this).addClass('hide');
+                }
+            }else{
+                    $(this).removeClass('hide');
+            }
+        });
+    });
+    let filterList = (function(){
+        $('.colorFill').each(function(){
+            $(this).addClass('hide');
+        });
+        $('.coastFill').each(function(){
+            $(this).addClass('hide');
+        });
+        $('.matFill').each(function(){
+            $(this).addClass('hide');
+        });
+        $('.product__item:not(.hide)').each(function(){
+            dataMaterial=$(this).attr('data-material');
+            dataColor=$(this).attr('data-color');
+            dataCoast=$(this).attr('data-coast');
+            $('.colorFill').each(function(){
+                if($(this).text().trim()==dataColor){
+                    $(this).removeClass('hide');
+                }
+            })
+            $('.coastFill').each(function(){
+                if($(this).text().trim()==dataCoast){
+                    $(this).removeClass('hide');
+                }
+            })
+            $('.matFill').each(function(){
+                if($(this).text().trim()==dataMaterial){
+                    $(this).removeClass('hide');
+                }
+            })
+        });
+    });
+    $( document ).ready(function() {
+        filterList();
+    });
