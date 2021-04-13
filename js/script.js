@@ -482,6 +482,28 @@ $('.haveChildren').on('click',function(){
             })
         });
     });
+    $('.oform__zakaz').on('click',function(){
+        $('#oform__zakaz').modal('show');
+    });
+    $(".callback").on('click',function(){
+        $('#callback__modal').modal('show');
+    });
+    $(".addToCart").on('click',function(){
+        $('#additional__modal').modal('show');
+    });
     $( document ).ready(function() {
         filterList();
+        height = $('.product__list').height();
+        $('.product__container').css('min-height',height);
+        $('.akcii__slider').slick({
+            slidesToShow: 4,
+            slidesToScroll: 1,
+            dots:true,
+            nextArrow:$('.next'),
+            prevArrow:$('.prev'),
+        })
+        $(".maskPhone").each(function(){
+            $(this).mask("+7 (999) 999-99-99");
+        })
+        $('#offer__modal').modal('show');
     });
