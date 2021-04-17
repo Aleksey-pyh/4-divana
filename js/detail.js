@@ -222,6 +222,14 @@ $('.navForFiltersSlider').on('click',function(){
                 slidesToShow: 6,
                 slidesToScroll: 6,
                 dots:true,
+                responsive: [{
+                    breakpoint: 576,
+                    settings: {
+                                slidesToShow: 5,
+                                slidesToScroll: 5,
+                              }
+                            },
+                        ]
             });
              //Фильтр материалов
              $('.matFill').on('click',function(){

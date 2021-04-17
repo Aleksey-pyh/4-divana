@@ -446,10 +446,9 @@ footer a:hover{
 /*catalog s*/
 .catalog__title{
     font-weight: 600;
-    font-size: 32px;
+    font-size: 25px;
     line-height: 113.7%;
     color: #0F0F0F;
-    margin-bottom: 43px;
 }
 .catalog__link{
     color: #0f0f0f;
@@ -631,7 +630,14 @@ footer a:hover{
     display: flex;
     justify-content: flex-start;
     align-items: center;
-    margin: 51px 0 30px;
+    margin: 15px 0 10px;
+    flex-wrap: wrap;
+}
+.__mobile img{
+    height: 150px;
+    width: 100%;
+    object-fit: cover;
+    margin-bottom: 10px;
 }
 .param{
     color: #606060;
@@ -673,11 +679,11 @@ footer a:hover{
 }
 .linkToGotovye{
     font-weight: 450;
-    font-size: 20px;
+    font-size: 15px;
     line-height: 113.7%;
     color: #0F0F0F;
     display: block;
-    margin: 27px 0 33px;
+    margin: 20px 0;
     max-width: max-content;
     border-bottom: 1px solid #0F0F0F;
     padding-bottom: 3px;
@@ -706,12 +712,29 @@ footer a:hover{
 }
 .razvernyt__body{
     opacity: 0;
-    transform: scale(0);
+    position: absolute;
+    z-index: -1;
     transition: all .3s;
+    overflow: hidden;
 }
 .razvernyt__body.active{
     opacity: 1;
+    z-index: 100;
+}
+.razvernyt__container{
+    transform: translateY(-300%);
+    background: white;
+    border: 1px solid #0F0F0F;
+    transition: all .5s;
+    padding: 15px;
+}
+.razvernyt__body.active .razvernyt__container{
     transform: none;
+}
+.detail__rigth img{
+    width: 100%;
+    object-fit: cover;
+    margin: 15px 0;
 }
 .coast__container{
     display: flex;
@@ -720,28 +743,25 @@ footer a:hover{
 }
 .coast__symma{
     font-weight: 600;
-    font-size: 28px;
+    font-size: 18px;
     line-height: 113.7%;
     color: #46820F;
 }
 .coast__info{
-    font-size: 16px;
-    line-height: 164.7%;
+    font-size: 12px;
+    line-height: normal;
     color: #626262;
-}
-.__rigthCol{
-    margin-top: -54px;
 }
 .buttonBlock{
     display: flex;
     justify-content: space-between;
-    margin: 39px 0 48px;
+    margin: 15px 0 15px;
 }
 .addToCart{
-    padding: 13px 42px;
+    padding: 8px 10px;
     background: #232323;
     font-weight: 450;
-    font-size: 18px;
+    font-size: 14px;
     line-height: 23px;
     color: #FFFFFF;
     cursor: pointer;
@@ -750,9 +770,9 @@ footer a:hover{
     background: #6D8953;
 }
 .zakazFree{
-    padding: 13px 56px;
+    padding: 8px 10px;
     font-weight: normal;
-    font-size: 18px;
+    font-size: 14px;
     line-height: 23px;
     color: #0F0F0F;
     border: 1px solid #0F0F0F;
@@ -766,15 +786,15 @@ footer a:hover{
 .navsForFiltersSlider{
     display: flex;
     justify-content: space-between;
-    margin-bottom: 27px;
+    margin-bottom: 8px;
 }
 .navForFiltersSlider{
     flex:1 1 0;
     text-align: center;
     border: 1px solid #0F0F0F;
     border-width: 1px 1px 1px 0;
-    padding: 15px 17px;
-    font-size: 22px;
+    padding: 10px 17px;
+    font-size: 18px;
     line-height: 113.7%;
     color: #0F0F0F;
     cursor: pointer;
@@ -795,10 +815,10 @@ footer a:hover{
     min-height: 56px;
 }
 .filter__item{
-    font-size: 20px;
-    line-height: 142.7%;
+    font-size: 16px;
+    line-height: normal;
     color: #000000;
-    margin-right: 15px;
+    margin-right: 8px;
     cursor: pointer;
     padding-bottom: 1px;
     margin-bottom: 1px;
@@ -829,7 +849,7 @@ footer a:hover{
     left: -15px;
 }
 .product__item{
-    width: calc((100%/6) - 30px);
+    
     margin: 15px;
     position: relative;
     transition: all .7s;
@@ -869,7 +889,7 @@ footer a:hover{
     border-bottom: 0;
 }
 .srokIz{
-    font-size: 20px;
+    font-size: 18px;
     line-height: 135.7%;
     color: #0F0F0F;
     font-weight: 300;
@@ -883,14 +903,17 @@ footer a:hover{
     justify-content: flex-end;
     align-items: baseline;
     font-weight: 400;
-    font-size: 20px;
+    font-size: 18px;
     line-height: 135.7%;
     color: #0F0F0F;
     margin: 25px 0 45px;
 }
+.__desktop{
+    display: none;
+}
 .result{
     font-weight: 600;
-    font-size: 28px;
+    font-size: 24px;
     color: #0F0F0F;
     margin-left: 27px;
 }
@@ -977,6 +1000,7 @@ footer a:hover{
     color: #0F0F0F;
     border: 1px solid #0F0F0F;
     margin-top: 39px;
+    margin-left: 15px;
 }
 .akcii__button:hover{
     color: white;
@@ -1412,6 +1436,28 @@ footer a:hover{
     line-height: 23px;
     color: #0F0F0F;
     margin: 25px 0 20px;
+}
+.product__list .slick-dots{
+    display: flex;
+    justify-content: center;
+    width: calc(100% - 30px);
+    left: 15px;
+    flex-wrap: wrap;
+}
+.product__list .slick-dots li button:before{
+    content: '';
+    border-radius: 100%;
+    border: 2px solid #6D8953;
+    width: 8px;
+    height: 8px;
+    background: #6D8953;
+    opacity: 1;
+}
+.product__list .slick-dots li.slick-active button:before{
+    background: transparent;
+}
+.product__list .slick-dots li{
+    width: 9px;
 }
 .some__list{
     display: flex;
