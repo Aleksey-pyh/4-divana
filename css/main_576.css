@@ -634,7 +634,7 @@ footer a:hover{
     flex-wrap: wrap;
 }
 .__mobile img{
-    height: 150px;
+    height: 180px;
     width: 100%;
     object-fit: cover;
     margin-bottom: 10px;
@@ -812,7 +812,7 @@ footer a:hover{
     flex-wrap: wrap;
     justify-content: flex-start;
     align-items: baseline;
-    min-height: 56px;
+    min-height: 65px;
 }
 .filter__item{
     font-size: 16px;
@@ -841,16 +841,13 @@ footer a:hover{
     margin-bottom: 15px;
 }
 .product__list{
-    display: flex;
-    justify-content: flex-start;
-    flex-wrap: wrap;
-    width: calc(100% + 30px);
+    width: calc(100% + 14px);
     position: relative;
-    left: -15px;
+    left: -7px;
 }
 .product__item{
     
-    margin: 15px;
+    margin: 7px;
     position: relative;
     transition: all .7s;
     cursor: pointer;
@@ -861,25 +858,8 @@ footer a:hover{
     flex: 0 0 0;
     margin: 0;
 }
-.product__item.hide .onHoverDesc{
-    display: none;
-}
 .onHoverDesc{
-    opacity: 0;
-    border: 1px solid #3f3f3f;
-    position: absolute;
-    padding: 9px 38px 12px 14px;
-    white-space: nowrap;
-    background: white;
-    font-size: 13px;
-    color: #0f0f0f;
-    top: -3px;
-    transition: all .4s;
-    z-index: 2;
-}
-.product__item:hover .onHoverDesc{
-    opacity: 1;
-    transform: translateY(-100%);
+    display: none;
 }
 .sbrosMat,.sbrosColor,.sbrosCoast{
     color: #A0A0A0;
