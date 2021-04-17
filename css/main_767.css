@@ -4,6 +4,7 @@
     margin: 15px 0;
     position: relative;
     display: block;
+    height: calc(100% - 30px);
 }
 .categoryOnMain__container:hover{
     color: #0F0F0F;
@@ -12,6 +13,7 @@
 .categoryOnMain__container img{
     width: 100%;
     object-fit: cover;
+    height: 100%;
 }
 .mar19b{
     margin-bottom: 19px;
@@ -22,15 +24,15 @@
 .categoryOnMain__absolute{
     position: absolute;
     top: 27px;
-    left: 38px;
-    max-width: calc(100% - 41px);
+    left: 23px;
+    max-width: calc(100% - 24px);
 }
 .categoryOnMain__name{
     font-weight: 600;
-    font-size: 22px;
+    font-size: 18px;
     line-height: 113.7%;
     color: #0F0F0F;
-    margin-bottom: 30px;
+    margin-bottom: 20px;
 }
 .categoryOnMain__link{
     padding-right: 34px;
@@ -99,7 +101,7 @@
     background: transparent;
     border: 0;
     padding-bottom: 25px;
-    width: 569px;
+    width: 230px;
     border-bottom: 1px solid #0F0F0F;
     font-size: 16px;
     line-height: 113.7%;
@@ -324,10 +326,6 @@
     position: relative;
     padding-right: 25px;
 }
-.breadcrumbs li:last-child{
-    font-family: 'Futura PT Book',sans-serif;
-    font-weight: 600;
-}
 .breadcrumbs li,.breadcrumbs a{
     color: #565656;
     font-size: 15px;
@@ -357,6 +355,13 @@
     right: 5px;
     top: 8px;
 }
+.breadcrumbs li:last-child{
+    font-family: 'Futura PT Book',sans-serif;
+    font-weight: 600;
+}
+.faq{
+    margin-bottom: 35px;
+}
 /*breadcrumbs e*/
 /*footer s*/
 footer{
@@ -377,6 +382,7 @@ footer a:hover{
     font-weight: 450;
     font-size: 15px;
     margin-bottom: 32px;
+    text-align: end;
 }
 .footer__menu{
     padding: 0;
@@ -404,6 +410,7 @@ footer a:hover{
 }
 .footer__contact{
     margin-bottom: 24px;
+    text-align: end;
 }
 .footer__contact a{
     display: block;
@@ -684,34 +691,14 @@ footer a:hover{
     cursor: pointer;
     margin-bottom: 20px;
 }
-.__mobile{
-    display: none;
-}
 .razvernyt__body{
     opacity: 0;
-    position: absolute;
-    z-index: -1;
+    transform: scale(0);
     transition: all .3s;
-    overflow: hidden;
 }
 .razvernyt__body.active{
     opacity: 1;
-    z-index: 100;
-}
-.razvernyt__container{
-    transform: translateY(-300%);
-    background: white;
-    border: 1px solid #0F0F0F;
-    transition: all .5s;
-    padding: 15px;
-}
-.razvernyt__body.active .razvernyt__container{
     transform: none;
-}
-.detail__rigth img{
-    width: 100%;
-    object-fit: cover;
-    margin: 15px 0;
 }
 .coast__container{
     display: flex;
@@ -1054,7 +1041,6 @@ footer a:hover{
     margin-bottom: 14px;
 }
 .about__text__withImage p{
-    width: calc(50% - 15px);
     margin-right: auto;
 }
 .about__text__withImage2 p{
@@ -1062,7 +1048,6 @@ footer a:hover{
     margin-right: auto;
 }
 .about__text__withImage img{
-    width: calc(50% - 15px);
     margin-left: auto;
     object-fit: cover;
 }
@@ -1072,7 +1057,7 @@ footer a:hover{
     object-fit: contain;
 }
 .text__rigth{
-    margin-left: 60px;
+    margin-top: 30px;
 }
 .about{
     margin-bottom: 85px;
@@ -1093,12 +1078,12 @@ footer a:hover{
 }
 .dostavka__list{
     display: flex;
-    justify-content: flex-start;
+    justify-content: space-between;
     align-items: center;
     flex-wrap: wrap;
 }
 .dostavka__item{
-    margin-right: 66px;
+    width: calc(50% - 30px);
 }
 .dostavka__h2{
     font-weight: 600;
@@ -1143,9 +1128,6 @@ footer a:hover{
     line-height: 149.7%;
     color: #303030;
 }
-.dostavka__faq{
-    margin-bottom: 100px;
-}
 .oplata__pic{
     margin-right: 25px;
 }
@@ -1167,15 +1149,15 @@ footer a:hover{
     margin-top: 70px;
 }
 /*cart*/
+.cart__pic{
+    display: none;
+}
 .cart__head{
     display: flex;
     justify-content: space-between;
     align-items: center;
     margin-top: 11px;
     margin-bottom: 41px;
-}
-.all__mobile{
-    display: none;
 }
 .cart__head p{
     font-size: 15px;
@@ -1278,8 +1260,11 @@ footer a:hover{
     justify-content: flex-start;
     margin-bottom: 40px;
 }
+.all__mobile{
+    display: none;
+}
 .oform__zakaz{
-    padding: 13px 38px;
+    padding: 13px 15px;
     background: #232323;
     color: #FFFFFF;
     font-family: 'Futura PT Book',sans-serif;
@@ -1296,7 +1281,7 @@ footer a:hover{
 .toCatalog{
     display: block;
     max-width: max-content;
-    padding: 13px 35px;
+    padding: 13px 15px;
     background: transparent;
     border: 1px solid #232323;
     color: #232323;
@@ -1327,12 +1312,12 @@ footer a:hover{
 }
 /*modal*/
 #oform__zakaz .modal-dialog,#callback__modal .modal-dialog{
-    max-width: 727px;
+    max-width: 100%;
 }
 #oform__zakaz .modal-content{
     border-radius: 0;
     border: 0;
-    padding: 55px 53px 78px;
+    padding: 35px 15px;
     position: relative;
 }
 #callback__modal .modal-content{
@@ -1364,7 +1349,7 @@ footer a:hover{
     flex-wrap: wrap;
 }
 #oform__zakaz .contact__block input,#callback__modal .contact__block input{
-    width: calc(50% - 40px);
+    width: 100%;
     border-radius: 0;
     border: 0;
     border-bottom: 1px solid #0F0F0F;

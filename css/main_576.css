@@ -23,7 +23,6 @@
     position: absolute;
     top: 27px;
     left: 38px;
-    max-width: calc(100% - 41px);
 }
 .categoryOnMain__name{
     font-weight: 600;
@@ -78,28 +77,30 @@
 /*catalog_main e*/
 /*subscribe s*/
 .greyBg{
-    padding: 65px 0 72px;
+    padding: 36px 0 68px;
     background: #F7F7F7;
     margin-top: 92px;
 }
 .formTitle{
     font-weight: 600;
-    font-size: 32px;
-    line-height: 113.7%;
+    font-size: 28px;
+    line-height: 141.2%;
+    text-align: center;
     color: #0F0F0F;
 }
 .subscribe__Title{
     font-weight: 450;
-    font-size: 25px;
+    font-size: 21px;
     line-height: 113.7%;
+    text-align: center;    
     color: #0F0F0F;
     margin: 18px 0 47px;
 }
 .subscribe input[type='email']{
     background: transparent;
     border: 0;
-    padding-bottom: 25px;
-    width: 569px;
+    padding-bottom: 12px;
+    width: 100%;
     border-bottom: 1px solid #0F0F0F;
     font-size: 16px;
     line-height: 113.7%;
@@ -119,8 +120,12 @@
     color: #0F0F0F;
     font-weight: 450;
     font-size: 20px;
-    padding: 22px 60px;
+    padding: 18px 58px;
     cursor: pointer;
+    margin: 45px auto 0;
+}
+.subscribe{
+    text-align: center;
 }
 .subscribe input[type='submit']:hover{
     color: white;
@@ -146,20 +151,23 @@
     font-weight: 600;
     font-size: 32px;
     color: #0F0F0F;
+    text-align: center;
 }
 .review__rating{
     display: flex;
-    justify-content: flex-start;
-    align-items: flex-end;
-}
-.review__reting__leftColunm{
-    margin-right: 68px;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
 }
 .review__rating__title{
     font-weight: 450;
     font-size: 25px;
-    margin-bottom:20px;
+    margin-bottom:15px;
     color: #0F0F0F;
+    text-align: center;
+}
+.avito{
+    margin-top: 15px;
 }
 .review__slider__container{
     max-width: 100%;
@@ -233,7 +241,7 @@
     transform: none;
 }
 .review__text{
-    width: 300px;
+    width: calc(100% - 45px);
     height: 100px;
     overflow: auto;
     margin: 0;
@@ -246,7 +254,7 @@
     margin-bottom: 2px;
 }
 .arrowContainer{
-    width: 370px;
+    width: calc(100% - 30px);
     margin: 25px auto 100px;
     display: flex;
     justify-content: space-between;
@@ -311,7 +319,7 @@
 /*review e*/
 /*breadcrumbs s*/
 .breadcrumbs{
-    margin: 43px 0 41px;
+    margin: 43px 0 0;
 }
 .breadcrumbs ul{
     display: flex;
@@ -323,10 +331,6 @@
     list-style-type: none;
     position: relative;
     padding-right: 25px;
-}
-.breadcrumbs li:last-child{
-    font-family: 'Futura PT Book',sans-serif;
-    font-weight: 600;
 }
 .breadcrumbs li,.breadcrumbs a{
     color: #565656;
@@ -357,6 +361,10 @@
     right: 5px;
     top: 8px;
 }
+.breadcrumbs li:last-child{
+    font-family: 'Futura PT Book',sans-serif;
+    font-weight: 600;
+}
 /*breadcrumbs e*/
 /*footer s*/
 footer{
@@ -374,9 +382,7 @@ footer a:hover{
     color: white;
 }
 .footer__title{
-    font-weight: 450;
-    font-size: 15px;
-    margin-bottom: 32px;
+    display: none;
 }
 .footer__menu{
     padding: 0;
@@ -395,6 +401,10 @@ footer a:hover{
     flex-direction: column;
     height: 100%;
 }
+.footer__pk{
+    position: absolute;
+    bottom: -295px;
+}
 .footer__pk p,.footer__pk a:not(:last-child){
     margin: 0 0 6px 0;
 }
@@ -403,21 +413,31 @@ footer a:hover{
     display: block;
 }
 .footer__contact{
-    margin-bottom: 24px;
+    margin: 24px 0;
 }
 .footer__contact a{
     display: block;
+    font-weight: 600;
+    font-size: 25px;
+    line-height: 174.15%;
+    color: #FFFFFF;
 }
 .footer_socLink{
     display: flex;
     justify-content: space-between;
     align-items: center;
     width: 100%;
+    margin-bottom: 60px;
 }
 .footer_socLink a{
     display: block;
-    font-size: 12px;
-    text-decoration: underline;
+    font-weight: 600;
+    font-size: 21px;
+    line-height: 168.13%;
+    color: #FFFFFF;
+    text-decoration: none;
+    padding-bottom: 4px;
+    border-bottom: 1px solid white;
 }
 .footer_socLink a:hover{
     opacity: 0.8;
@@ -684,34 +704,14 @@ footer a:hover{
     cursor: pointer;
     margin-bottom: 20px;
 }
-.__mobile{
-    display: none;
-}
 .razvernyt__body{
     opacity: 0;
-    position: absolute;
-    z-index: -1;
+    transform: scale(0);
     transition: all .3s;
-    overflow: hidden;
 }
 .razvernyt__body.active{
     opacity: 1;
-    z-index: 100;
-}
-.razvernyt__container{
-    transform: translateY(-300%);
-    background: white;
-    border: 1px solid #0F0F0F;
-    transition: all .5s;
-    padding: 15px;
-}
-.razvernyt__body.active .razvernyt__container{
     transform: none;
-}
-.detail__rigth img{
-    width: 100%;
-    object-fit: cover;
-    margin: 15px 0;
 }
 .coast__container{
     display: flex;
@@ -904,6 +904,9 @@ footer a:hover{
 .relaited__link,.akcii__link{
     color: #0F0F0F;
 }
+.relaited__link{
+    text-align: center;
+}
 .relaited__link:hover,.akcii__link:hover{
     text-decoration: none;
     color: #0F0F0F;
@@ -913,7 +916,7 @@ footer a:hover{
     font-size: 19px;
     line-height: 113.7%;
     color: #0F0F0F;
-    margin: 20px 0 30px;
+    margin: 15px 0 7px;
 }
 .relaited__price{
     font-weight: 600;
@@ -925,11 +928,14 @@ footer a:hover{
 .relaited__button{
     display: block;
     max-width: max-content;
-    margin: 38px 0 40px;
+    margin: 30px auto 55px;
     padding: 13px 36px;
     background: #6D8953;
     color: white;
     border: 1px solid transparent;
+}
+.relaited__pic{
+    width: 100%;
 }
 .relaited__button:hover{
     color: #0F0F0F;
@@ -1028,7 +1034,7 @@ footer a:hover{
 }
 .about__title{
     font-weight: 600;
-    font-size: 32px;
+    font-size: 25px;
     line-height: 113.7%;
     color: #0F0F0F;
     margin: 30px 0;
@@ -1045,7 +1051,10 @@ footer a:hover{
     line-height: 149.7%;
     color: #303030;
 }
-.about__text__withImage,.about__text__withImage2{
+.about__text__withImage{
+    /* flex-direction: column; */
+}
+.about__text__withImage2{
     display: flex;
     justify-content: space-between;
     align-items: flex-start;
@@ -1054,7 +1063,6 @@ footer a:hover{
     margin-bottom: 14px;
 }
 .about__text__withImage p{
-    width: calc(50% - 15px);
     margin-right: auto;
 }
 .about__text__withImage2 p{
@@ -1062,7 +1070,6 @@ footer a:hover{
     margin-right: auto;
 }
 .about__text__withImage img{
-    width: calc(50% - 15px);
     margin-left: auto;
     object-fit: cover;
 }
@@ -1072,7 +1079,7 @@ footer a:hover{
     object-fit: contain;
 }
 .text__rigth{
-    margin-left: 60px;
+    margin-top: 30px;
 }
 .about{
     margin-bottom: 85px;
@@ -1093,12 +1100,12 @@ footer a:hover{
 }
 .dostavka__list{
     display: flex;
-    justify-content: flex-start;
+    justify-content: space-between;
     align-items: center;
     flex-wrap: wrap;
 }
 .dostavka__item{
-    margin-right: 66px;
+    width: calc(50% - 30px);
 }
 .dostavka__h2{
     font-weight: 600;
@@ -1143,11 +1150,17 @@ footer a:hover{
     line-height: 149.7%;
     color: #303030;
 }
-.dostavka__faq{
-    margin-bottom: 100px;
+.oplata__pics{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
 }
-.oplata__pic{
-    margin-right: 25px;
+.oplata__pics img{
+    width:calc(50% - 30px) ;
+    object-fit: contain;
+}
+.faq{
+    margin-bottom: 35px;
 }
 .oplata__subtitle{
     font-weight: 450;
@@ -1167,14 +1180,10 @@ footer a:hover{
     margin-top: 70px;
 }
 /*cart*/
-.cart__head{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin-top: 11px;
-    margin-bottom: 41px;
+.cart__pic{
+    display: none;
 }
-.all__mobile{
+.cart__head{
     display: none;
 }
 .cart__head p{
@@ -1184,15 +1193,26 @@ footer a:hover{
 }
 .cart__container{
     margin-top: 48px;
-    border-top: 1px solid #0F0F0F;
-    border-bottom: 1px solid #0F0F0F;
     padding-bottom: 11px;
+}
+.count__container{
+    min-height: 100%;
+    text-align: center;
+    position: relative;
 }
 .cart__row{
     display: flex;
     justify-content: space-between;
-    align-items: center;
-    margin: 19px 0;
+    margin: 50px 0;
+    position: relative;
+}
+.all__mobile{
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+}
+.cart__body .all{
+    display: none;
 }
 .cart__body .count{
     width: 31px;
@@ -1206,6 +1226,7 @@ footer a:hover{
     height: 10px;
     position: relative;
     cursor: pointer;
+    align-self: center;
 }
 .delete::before{
     content: '';
@@ -1236,14 +1257,18 @@ footer a:hover{
 .cart__head .price{
     margin-left: 13px;
 }
+.price{
+    display: none;
+}
 .cart__head .count{
     margin-left: 11px;
 }
 .cart__promo{
     display: flex;
     justify-content: space-between;
-    align-items: center;
-    margin: 37px 0 49px;
+    align-items: flex-start;
+    margin: 37px 0 30px;
+    flex-direction: column;
 }
 .cart__promo .promo{
     padding: 13px 0;
@@ -1267,6 +1292,7 @@ footer a:hover{
     font-size: 18px;
     line-height: 23px;
     color: #292929;
+    margin-top: 44px;
 }
 .cart__promo .summ span{
     font-family: 'Futura PT',sans-serif;
@@ -1275,19 +1301,22 @@ footer a:hover{
 }
 .cart__button{
     display: flex;
-    justify-content: flex-start;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
     margin-bottom: 40px;
 }
 .oform__zakaz{
-    padding: 13px 38px;
+    padding: 13px 0;
     background: #232323;
+    width: 100%;
     color: #FFFFFF;
     font-family: 'Futura PT Book',sans-serif;
     font-style: normal;
     font-weight: normal;
     font-size: 18px;
     line-height: 23px;
-    color: #FFFFFF;
+    text-align: center;
     cursor: pointer;
 }
 .oform__zakaz:hover{
@@ -1296,7 +1325,7 @@ footer a:hover{
 .toCatalog{
     display: block;
     max-width: max-content;
-    padding: 13px 35px;
+    padding: 13px 15px;
     background: transparent;
     border: 1px solid #232323;
     color: #232323;
@@ -1305,7 +1334,7 @@ footer a:hover{
     font-weight: normal;
     font-size: 18px;
     line-height: 23px;
-    margin-left: 24px;
+    margin: 31px 0;
 }
 .toCatalog:hover{
     background: #6D8953;
@@ -1314,25 +1343,23 @@ footer a:hover{
     border: 1px solid transparent;
 }
 .clear{
-    align-self: flex-end;
     font-family: 'Futura PT Book',sans-serif;
     font-weight: normal;
     font-size: 16px;
     line-height: 21px;
     color: #747474;
-    margin-left: auto;
     max-width: max-content;
     text-align: end;
     cursor: pointer;
 }
 /*modal*/
 #oform__zakaz .modal-dialog,#callback__modal .modal-dialog{
-    max-width: 727px;
+    max-width: 100%;
 }
 #oform__zakaz .modal-content{
     border-radius: 0;
     border: 0;
-    padding: 55px 53px 78px;
+    padding: 35px 15px;
     position: relative;
 }
 #callback__modal .modal-content{
@@ -1364,7 +1391,7 @@ footer a:hover{
     flex-wrap: wrap;
 }
 #oform__zakaz .contact__block input,#callback__modal .contact__block input{
-    width: calc(50% - 40px);
+    width: 100%;
     border-radius: 0;
     border: 0;
     border-bottom: 1px solid #0F0F0F;
@@ -1384,7 +1411,7 @@ footer a:hover{
     font-size: 18px;
     line-height: 23px;
     color: #0F0F0F;
-    margin: 49px 0 29px;
+    margin: 25px 0 20px;
 }
 .some__list{
     display: flex;
@@ -1552,14 +1579,14 @@ footer a:hover{
     border: 0;
     border-radius: 0;
     position: relative;
-    padding: 62px 46px 78px;
+    padding: 35px 15px 35px;
     background-image: url(../images/offer.png);
     background-repeat: no-repeat;
     background-position: right;
 }
 #offer__modal .modal-title{
-    font-size: 28px;
-    line-height: 125.7%;
+    font-size: 22px;
+    line-height: normal;
     color: #0F0F0F;
     margin-bottom: 55px;
 }
