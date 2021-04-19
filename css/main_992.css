@@ -472,10 +472,10 @@ footer a:hover{
 }
 .material .ready__filter__head{
     border: 1px solid #3F3F3F;
+    margin-right: 30px;
 }
 .color .ready__filter__head{
     border: 1px solid #3F3F3F;
-    border-width: 1px 1px 1px 0;
 }
 .ready__filter{
     position: relative;
@@ -521,16 +521,24 @@ footer a:hover{
     transition: all .7s;
     background: white;
     width: 100%;
-    border: 1px solid #0F0F0F;
+    border: 1px solid #000000;
     cursor: pointer;
+    border-width: 0 1px 1px 1px;
+    padding: 25px 40px;
 }
-.ready__filter__select__list__item:hover{
-    background-color: #6D8953;
-    color: white;
+.ready__filter__select__list__item:hover,.ready__filter__select__list__item.select{
+    color: #6D8953;
 }
-.ready__filter__select__list__item.select{
-    background-color: #6D8953;
-    color: white;
+.ready__filter__select__list__item{
+    font-size: 20px;
+    line-height: 172.2%;
+    color: #3F3F3F;
+}
+.ready__filter__select__list__item.sbrosmat,.ready__filter__select__list__item.sbroscol{
+    margin-top: 24px;
+    font-size: 18px;
+    line-height: 113.7%;
+    color: #606060;
 }
 .ready__filter__container{
     display: flex;
@@ -584,10 +592,7 @@ footer a:hover{
     display: none;
 }
 .ready__filter__select__list.left{
-    border-width: 0px 0 1px 1px;
-}
-.ready__filter__select__list.right{
-    border-width: 0px 1px 1px 0px;
+    width: calc(100% - 30px);
 }
 .ready__goCatalog{
     display: block;
@@ -604,6 +609,9 @@ footer a:hover{
 }
 .ready__subscribe{
     margin-bottom: 86px;
+}
+.ready__ligth img{
+    width: 100%;
 }
 /*ready e*/
 /*detail*/

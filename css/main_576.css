@@ -319,7 +319,7 @@
 /*review e*/
 /*breadcrumbs s*/
 .breadcrumbs{
-    margin: 43px 0 0;
+    margin: 43px 0 20px;
 }
 .breadcrumbs ul{
     display: flex;
@@ -334,8 +334,8 @@
 }
 .breadcrumbs li,.breadcrumbs a{
     color: #565656;
-    font-size: 15px;
-    line-height: 19px;
+    font-size: 12px;
+    line-height: normal;
 }
 .breadcrumbs a:hover{
     color: #6D8953;
@@ -449,6 +449,7 @@ footer a:hover{
     font-size: 25px;
     line-height: 113.7%;
     color: #0F0F0F;
+    margin: 15px 0;
 }
 .catalog__link{
     color: #0f0f0f;
@@ -473,36 +474,34 @@ footer a:hover{
 /*catalog e*/
 /*ready s*/
 .ready__text{  
-    font-size: 20px;
-    line-height: 140.2%;
+    font-size: 16px;
+    line-height: normal;
     color: #0F0F0F;
-    margin-bottom: 58px;
+    margin: 5px 0;
 }
 .ready__filter__head{
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
     font-size: 20px;
     line-height: 113.7%;
     color: #3F3F3F;
     height: 100%;
-    padding: 11px 0 13px;
+    padding: 11px 30px 13px;
+    width: 100%;
+}
+.ready__filter__head.colfillHead{
+    margin-top: 19px;
 }
 .material .ready__filter__head{
     border: 1px solid #3F3F3F;
+    margin-right: 30px;
 }
 .color .ready__filter__head{
     border: 1px solid #3F3F3F;
-    border-width: 1px 1px 1px 0;
 }
 .ready__filter{
     position: relative;
-}
-.material{
-    width: 255px;
-}
-.color{
-    width: 191px;
 }
 .ready__filter__head::after{
     content: '';
@@ -539,29 +538,34 @@ footer a:hover{
     transition: all .7s;
     background: white;
     width: 100%;
-    border: 1px solid #0F0F0F;
+    border: 1px solid #000000;
     cursor: pointer;
+    border-width: 0 1px 1px 1px;
+    padding: 25px 40px;
 }
-.ready__filter__select__list__item:hover{
-    background-color: #6D8953;
-    color: white;
+.ready__filter__select__list__item:hover,.ready__filter__select__list__item.select{
+    color: #6D8953;
 }
-.ready__filter__select__list__item.select{
-    background-color: #6D8953;
-    color: white;
+.ready__filter__select__list__item{
+    font-size: 18px;
+    line-height: normal;
+    color: #3F3F3F;
+}
+.ready__filter__select__list__item.sbrosmat,.ready__filter__select__list__item.sbroscol{
+    margin-top: 24px;
+    font-size: 16px;
+    line-height: 113.7%;
+    color: #606060;
 }
 .ready__filter__container{
     display: flex;
     justify-content: flex-start;
-    margin-bottom: 65px;
+    margin: 30px 0;
+    flex-direction: column;
 }
 .ready__ligth:hover{
     text-decoration: none;
     color: #6D8953;
-}
-.animate{
-    opacity: 1;
-    transition: all 0.7s;
 }
 .animate.hide{
     opacity: 0;
@@ -571,7 +575,7 @@ footer a:hover{
     padding: 0!important;
 }
 .animate p{
-    font-size: 14px;
+    font-size: 13px;
     line-height: 104.7%;
     color: #0F0F0F;
     margin-top: 18px;
@@ -579,9 +583,6 @@ footer a:hover{
 }
 .animate p:hover{
     color: #6D8953;
-}
-.filter_row{
-    min-height: 485px;
 }
 .hideText{
     flex: 0 0 0%;
@@ -601,19 +602,15 @@ footer a:hover{
 .ready__filter__select__list__item.hide{
     display: none;
 }
-.ready__filter__select__list.left{
-    border-width: 0px 0 1px 1px;
-}
-.ready__filter__select__list.right{
-    border-width: 0px 1px 1px 0px;
-}
 .ready__goCatalog{
     display: block;
     max-width: max-content;
     margin: 56px auto 92px;
-    padding: 23px 71px;
+    padding: 18px 58px;
     color: white;
     background: #0F0F0F;
+    font-size: 20px;
+    line-height: normal;
 }
 .ready__goCatalog:hover{
     color: white;
@@ -622,6 +619,17 @@ footer a:hover{
 }
 .ready__subscribe{
     margin-bottom: 86px;
+}
+.ready__ligth img{
+    width: 100%;
+}
+.animate{
+    padding: 0;
+}
+.ready__ligth{
+    width: calc(100% - 30px);
+    margin: 0 15px;
+    display: block;
 }
 /*ready e*/
 /*detail*/
@@ -1417,14 +1425,14 @@ footer a:hover{
     color: #0F0F0F;
     margin: 25px 0 20px;
 }
-.product__list .slick-dots{
+.product__list .slick-dots,.filter_row .slick-dots{
     display: flex;
     justify-content: center;
     width: calc(100% - 30px);
     left: 15px;
     flex-wrap: wrap;
 }
-.product__list .slick-dots li button:before{
+.product__list .slick-dots li button:before,.filter_row .slick-dots li button:before{
     content: '';
     border-radius: 100%;
     border: 2px solid #6D8953;
@@ -1433,7 +1441,10 @@ footer a:hover{
     background: #6D8953;
     opacity: 1;
 }
-.product__list .slick-dots li.slick-active button:before{
+.filter_row .slick-dots li{
+    width: 12px;
+}
+.product__list .slick-dots li.slick-active button:before,.filter_row .slick-dots li.slick-active button:before{
     background: transparent;
 }
 .product__list .slick-dots li{
