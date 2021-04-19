@@ -218,19 +218,19 @@ $('.navForFiltersSlider').on('click',function(){
             filterList();
         } else {
             filterList();
-            $('.product__list').slick({
-                slidesToShow: 6,
-                slidesToScroll: 6,
-                dots:true,
-                responsive: [{
-                    breakpoint: 576,
-                    settings: {
-                                slidesToShow: 5,
-                                slidesToScroll: 5,
-                              }
-                            },
-                        ]
-            });
+            // $('.product__list').slick({
+            //     slidesToShow: 6,
+            //     slidesToScroll: 6,
+            //     dots:true,
+            //     responsive: [{
+            //         breakpoint: 576,
+            //         settings: {
+            //                     slidesToShow: 5,
+            //                     slidesToScroll: 5,
+            //                   }
+            //                 },
+            //             ]
+            // });
              //Фильтр материалов
              $('.matFill').on('click',function(){
                 filterMat=$(this).text().trim();
