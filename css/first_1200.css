@@ -12,19 +12,20 @@ body{
     position: relative;
     z-index: 2;
 }
-.mobile__headrow{
-    display: none;
+img{
+    max-width: 100%;
 }
 main{
     overflow: hidden;
 }
-img{
-    max-width: 100%;
+.mobile__headrow{
+    display: none;
 }
 .mainMenu{
     display: flex;
     justify-content: flex-start;
     margin-top: 11px;
+    padding-left: 10px;
 }
 .contact_block{
     margin-top: 11px;
@@ -34,11 +35,11 @@ img{
     list-style-type: none;
 }
 .mainMenu .firstLevel{
-    margin-right: 32px;
+    margin-right: 15px;
     padding-bottom: 5px;
     font-weight: 450;
-    font-size: 15px;
-    line-height: 19px;
+    font-size: 14px;
+    line-height: normal;
     color: #0F0F0F;
     display: flex;
     justify-content: center;
@@ -146,7 +147,7 @@ img{
 .container.__custom{
     margin-left: auto;
     margin-right: 0;
-    max-width: calc(1140px + ((100% - 1140px)/2));
+    max-width: calc(960px + ((100% - 960px)/2));
 }
 .homeTitle{
     text-transform: uppercase;
@@ -203,7 +204,7 @@ img{
 }
 .firstScreen__slider__rigth p{
     bottom: 0;
-    left: 150px;
+    left: 0;
 }
 .firstScreen__slider__left p{
     bottom: 0;

@@ -12,6 +12,7 @@
 .categoryOnMain__container img{
     width: 100%;
     object-fit: cover;
+    max-height: 263px;
 }
 .mar19b{
     margin-bottom: 19px;
@@ -21,9 +22,8 @@
 }
 .categoryOnMain__absolute{
     position: absolute;
-    top: 27px;
+    top: 18px;
     left: 38px;
-    max-width: calc(100% - 41px);
 }
 .categoryOnMain__name{
     font-weight: 600;
@@ -99,7 +99,7 @@
     background: transparent;
     border: 0;
     padding-bottom: 25px;
-    width: 569px;
+    width: 350px;
     border-bottom: 1px solid #0F0F0F;
     font-size: 16px;
     line-height: 113.7%;
@@ -324,10 +324,6 @@
     position: relative;
     padding-right: 25px;
 }
-.breadcrumbs li:last-child{
-    font-family: 'Futura PT Book',sans-serif;
-    font-weight: 600;
-}
 .breadcrumbs li,.breadcrumbs a{
     color: #565656;
     font-size: 15px;
@@ -357,6 +353,10 @@
     right: 5px;
     top: 8px;
 }
+.breadcrumbs li:last-child{
+    font-family: 'Futura PT Book',sans-serif;
+    font-weight: 600;
+}
 /*breadcrumbs e*/
 /*footer s*/
 footer{
@@ -377,6 +377,7 @@ footer a:hover{
     font-weight: 450;
     font-size: 15px;
     margin-bottom: 32px;
+    text-align: end;
 }
 .footer__menu{
     padding: 0;
@@ -404,6 +405,7 @@ footer a:hover{
 }
 .footer__contact{
     margin-bottom: 24px;
+    text-align: end;
 }
 .footer__contact a{
     display: block;
@@ -429,7 +431,6 @@ footer a:hover{
     font-size: 32px;
     line-height: 113.7%;
     color: #0F0F0F;
-    margin-bottom: 43px;
 }
 .catalog__link{
     color: #0f0f0f;
@@ -609,6 +610,9 @@ footer a:hover{
 .ready__subscribe{
     margin-bottom: 86px;
 }
+.ready__ligth img{
+    width: 100%;
+}
 /*ready e*/
 /*detail*/
 /*карточка товара*/
@@ -616,7 +620,7 @@ footer a:hover{
     display: flex;
     justify-content: flex-start;
     align-items: center;
-    margin: 51px 0 30px;
+    margin: 20px 0 30px;
 }
 .param{
     color: #606060;
@@ -641,7 +645,10 @@ footer a:hover{
 .wrapper__images img.absolute{
     max-width: max-content;
 }
-.loupe {
+.__desktop{
+    display: none;
+}
+/* .loupe {
     background: rgba(0, 0, 0, 0.25) no-repeat;
     border-radius: 0 100% 100% 100%;
     pointer-events: none;
@@ -655,7 +662,16 @@ footer a:hover{
 }
 .loupe--active {
     opacity: 1;
+} */
+.__mobile{
+    margin-bottom: 30px;
 }
+.__mobile img{    
+    max-height: 300px;
+    object-fit: cover;
+    width: 100%;
+}
+
 .linkToGotovye{
     font-weight: 450;
     font-size: 20px;
@@ -689,9 +705,6 @@ footer a:hover{
     cursor: pointer;
     margin-bottom: 20px;
 }
-.__mobile{
-    display: none;
-}
 .razvernyt__body{
     opacity: 0;
     position: absolute;
@@ -713,11 +726,6 @@ footer a:hover{
 .razvernyt__body.active .razvernyt__container{
     transform: none;
 }
-.detail__rigth img{
-    width: 100%;
-    object-fit: cover;
-    margin: 15px 0;
-}
 .coast__container{
     display: flex;
     justify-content: space-between;
@@ -733,9 +741,6 @@ footer a:hover{
     font-size: 16px;
     line-height: 164.7%;
     color: #626262;
-}
-.__rigthCol{
-    margin-top: -54px;
 }
 .buttonBlock{
     display: flex;
@@ -833,38 +838,48 @@ footer a:hover{
     position: relative;
     left: -15px;
 }
+.product__list .slick-dots{
+    display: flex;
+    justify-content: center;
+    width: calc(100% - 30px);
+    left: 15px;
+    flex-wrap: wrap;
+}
+.product__list .slick-dots li button:before{
+    content: '';
+    border-radius: 100%;
+    border: 2px solid #6D8953;
+    width: 8px;
+    height: 8px;
+    background: #6D8953;
+    opacity: 1;
+}
+.detail__rigth img{
+    width: 100%;
+    object-fit: cover;
+    margin: 15px 0;
+}
+.product__list .slick-dots li.slick-active button:before{
+    background: transparent;
+}
 .product__item{
-    width: calc((100%/6) - 30px);
+    /* width: calc((100%/6) - 30px); */
     margin: 15px;
     position: relative;
     transition: all .7s;
     cursor: pointer;
     z-index: 3;
 }
+.product__item img{
+    width: 100%;
+}
 .product__item.hide{
     width: 0;
     flex: 0 0 0;
     margin: 0;
 }
-.product__item.hide .onHoverDesc{
-    display: none;
-}
 .onHoverDesc{
-    opacity: 0;
-    border: 1px solid #3f3f3f;
-    position: absolute;
-    padding: 9px 38px 12px 14px;
-    white-space: nowrap;
-    background: white;
-    font-size: 13px;
-    color: #0f0f0f;
-    top: -3px;
-    transition: all .4s;
-    z-index: 2;
-}
-.product__item:hover .onHoverDesc{
-    opacity: 1;
-    transform: translateY(-100%);
+    display: none;
 }
 .sbrosMat,.sbrosColor,.sbrosCoast{
     color: #A0A0A0;
@@ -1060,7 +1075,6 @@ footer a:hover{
     margin-bottom: 14px;
 }
 .about__text__withImage p{
-    width: calc(50% - 15px);
     margin-right: auto;
 }
 .about__text__withImage2 p{
@@ -1068,7 +1082,6 @@ footer a:hover{
     margin-right: auto;
 }
 .about__text__withImage img{
-    width: calc(50% - 15px);
     margin-left: auto;
     object-fit: cover;
 }
@@ -1078,7 +1091,7 @@ footer a:hover{
     object-fit: contain;
 }
 .text__rigth{
-    margin-left: 60px;
+    margin-top: 30px;
 }
 .about{
     margin-bottom: 85px;
@@ -1099,12 +1112,12 @@ footer a:hover{
 }
 .dostavka__list{
     display: flex;
-    justify-content: flex-start;
+    justify-content: space-between;
     align-items: center;
     flex-wrap: wrap;
 }
 .dostavka__item{
-    margin-right: 66px;
+    width: calc(50% - 30px);
 }
 .dostavka__h2{
     font-weight: 600;
@@ -1149,11 +1162,14 @@ footer a:hover{
     line-height: 149.7%;
     color: #303030;
 }
-.dostavka__faq{
-    margin-bottom: 100px;
+.oplata__pics{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
 }
-.oplata__pic{
-    margin-right: 25px;
+.oplata__pics img{
+    width:calc(50% - 30px) ;
+    object-fit: contain;
 }
 .oplata__subtitle{
     font-weight: 450;
@@ -1172,16 +1188,22 @@ footer a:hover{
 .dostavka__h2{
     margin-top: 70px;
 }
+.faq{
+    margin-bottom: 35px;
+}
 /*cart*/
+.cart__pic{
+    display: none;
+}
+.all__mobile{
+    display: none;
+}
 .cart__head{
     display: flex;
     justify-content: space-between;
     align-items: center;
     margin-top: 11px;
     margin-bottom: 41px;
-}
-.all__mobile{
-    display: none;
 }
 .cart__head p{
     font-size: 15px;

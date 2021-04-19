@@ -6,7 +6,11 @@
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
 	<link rel="stylesheet" href="css/bootstrap.min.css">
-    <link rel="stylesheet" href="css/first.css">
+    <link media="screen and (min-width: 1201px) and (max-width: 9000px)" type="text/css" rel="stylesheet" href="css/first.css" />
+    <link media="screen and (min-width: 993px) and (max-width: 1200px)" type="text/css" rel="stylesheet" href="css/first_1200.css" />
+    <link media="screen and (min-width: 769px) and (max-width: 992px)" type="text/css" rel="stylesheet" href="css/first_992.css" />
+    <link media="screen and (min-width: 577px) and (max-width: 768px)" type="text/css" rel="stylesheet" href="css/first_767.css" />
+    <link media="screen and (max-width: 576px)" type="text/css" rel="stylesheet" href="css/first_576.css" />
     <link rel="stylesheet" href="css/fonts/stylesheet.css">
     <title></title>
 </head>
@@ -27,7 +31,7 @@
                                 <div class="sub">
                                     <ul class="sub_menu">
                                         <li class="sub_title">По категории</li>
-                                        <li><a href="">Чехлы для подлокотников</a></li>
+                                        <li><a href="catalog.html">Чехлы для подлокотников</a></li>
                                         <li><a href="">Чехлы для подлокотников</a></li>
                                         <li><a href="">Чехлы для подлокотников</a></li>
                                         <li><a href="">Чехлы для подлокотников</a></li>
@@ -90,6 +94,52 @@
                 </div>
             </div>
         </div>
+        <div class="mobile__headrow">
+            <div class="row">
+                <div class="col-md-3 col-6">
+                    <a href="/" class="mobile__logo"><img src="images/logoMobile.png" alt=""></a>
+                    <div class="burgerButt">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </div>
+                </div>
+                <div class="col-md-3 col-6"><a href="tel:+74997024559" class="mobile__telHead">+7 (499) 702-45-59</a></div>
+                <div class="col-md-6 col-12">
+                    <div class="mobile__icon_link">
+                        <a href="" class="lkHead"></a>
+                        <a href="" class="cart"></a>
+                        <a href="" class="facebook"></a>
+                        <a href="" class="vk"></a>
+                        <a href="" class="insta"></a>
+                    </div>
+                </div>
+            </div>
+            <nav class="mobile__menu">
+                <div class="callback">Заказать звонок</div>
+                <ul>
+                    <li class="mobile__first" id="scrollCatalog"><a href="">Каталог</a></li>
+                    <li class="mobile__first"><a href="">Распродажа</a></li>
+                    <li class="mobile__first"><a href="">Бесплатные образцы</a></li>
+                    <li class="mobile__first"><a href="">О компании</a></li>
+                    <li class="mobile__first mobile__hasChild">
+                        <div class="mobile__hasChild__head">Покупателям</div>
+                        <div class="mobile__hasChild__body">
+                            <ul>
+                                <li><a href="">Вопросы</a></li>
+                                <li><a href="">Доставка</a></li>
+                                <li><a href="">Оплата</a></li>
+                                <li><a href="">Гарантия</a></li>
+                                <li><a href="">Уход за изделиями</a></li>
+                                <li><a href="">Организациям</a></li>
+                                <li><a href="">Блог</a></li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li class="mobile__first"><a href="">Контакты</a></li>
+                </ul>
+            </nav>
+        </div>
     </div>
 </header>
 <main>
@@ -116,7 +166,7 @@
     </div>
     <!-- ХБ -->
     
-    <div class="container">
+    <div class="container forWidth">
         <div class="row">
             <div class="col-12"><h1 class="catalog__title">Фотографии готовых чехлов по цветам</h1></div>
             <div class="col-lg-6">
@@ -132,7 +182,6 @@
                         <div class="ready__filter__head matHead">Материал </div>
                         <div class="ready__filter__overflow">
                             <div class="ready__filter__select__list left">
-                                <div class="ready__filter__select__list__item sbrosmat">Сбросить</div>
                                 <div class="ready__filter__select__list__item mat">Хлопок</div>
                                 <div class="ready__filter__select__list__item mat">Лен</div>
                                 <div class="ready__filter__select__list__item mat">Микровельвет</div>
@@ -140,6 +189,7 @@
                                 <div class="ready__filter__select__list__item mat">Антикоготь</div>
                                 <div class="ready__filter__select__list__item mat">Рогожка</div>
                                 <div class="ready__filter__select__list__item mat">Экокожа</div>
+                                <div class="ready__filter__select__list__item sbrosmat">Сбросить</div>
                             </div>
                         </div>
                     </div>
@@ -147,7 +197,6 @@
                         <div class="ready__filter__head colfillHead">Цвет </div>
                         <div class="ready__filter__overflow">
                             <div class="ready__filter__select__list right">
-                                <div class="ready__filter__select__list__item sbroscol">Сбросить</div>
                                 <div class="ready__filter__select__list__item colfill">Белый</div>
                                 <div class="ready__filter__select__list__item colfill">Серый</div>
                                 <div class="ready__filter__select__list__item colfill">Черный</div>
@@ -159,6 +208,7 @@
                                 <div class="ready__filter__select__list__item colfill">Синий</div>
                                 <div class="ready__filter__select__list__item colfill">Зёленый</div>
                                 <div class="ready__filter__select__list__item colfill">Разноцветный</div>
+                                <div class="ready__filter__select__list__item sbroscol">Сбросить</div>
                             </div>
                         </div>
                     </div>
@@ -167,7 +217,7 @@
         </div>
         <div class='row filter_row'>
             <div class="col-12 hideText">Таких материалов нет. Пожалуйста выберете другие</div>
-                <div class="col-1 animate" data-color="Белый" data-material='Хлопок'>
+                <div class="col-xl-1 col-md-2 animate" data-color="Белый" data-material='Хлопок'>
                     <a href="images/cat1.png" data-lightbox='ready1' class="ready__ligth">
                         <img src="images/ready1.png" alt="">
                         <p>Абсолютно белый</p>
@@ -177,7 +227,7 @@
                     <a href="images/cat3.png" data-lightbox='ready1'></a>
                     <a href="images/cat1.png" data-lightbox='ready1'></a>
                 </div>
-                <div class="col-1 animate" data-color='Серый' data-material='Лен'>
+                <div class="col-xl-1 col-md-2 animate" data-color='Серый' data-material='Лен'>
                     <a href="images/cat2.png" data-lightbox='ready2' class="ready__ligth">
                         <img src="images/ready2.png" alt="">
                         <p>Абсолютно белый</p>
@@ -187,7 +237,7 @@
                     <a href="images/cat2.png" data-lightbox='ready2'></a>
                     <a href="images/cat2.png" data-lightbox='ready2'></a>
                 </div>
-                <div class="col-1 animate" data-color='Черный' data-material='Микровельвет'>
+                <div class="col-xl-1 col-md-2 animate" data-color='Черный' data-material='Микровельвет'>
                     <a href="" data-lightbox='ready3' class="ready__ligth">
                         <img src="images/ready3.png" alt="">
                         <p>Абсолютно белый</p>
@@ -197,7 +247,7 @@
                     <a href="images/cat3.png" data-lightbox='ready3'></a>
                     <a href="images/cat3.png" data-lightbox='ready3'></a>
                 </div>
-                <div class="col-1 animate" data-color='Красный' data-material='Велюр'>
+                <div class="col-xl-1 col-md-2 animate" data-color='Красный' data-material='Велюр'>
                     <a href="images/cat4.png" data-lightbox='ready4' class="ready__ligth">
                         <img src="images/ready4.png" alt="">
                         <p>Абсолютно белый</p>
@@ -207,7 +257,7 @@
                     <a href="images/cat4.png" data-lightbox='ready4'></a>
                     <a href="images/cat4.png" data-lightbox='ready4'></a>
                 </div>
-                <div class="col-1 animate" data-color='Желтый' data-material='Антикоготь'>
+                <div class="col-xl-1 col-md-2 animate" data-color='Желтый' data-material='Антикоготь'>
                     <a href="" data-lightbox='ready5' class="ready__ligth">
                         <img src="images/ready5.png" alt="">
                         <p>Абсолютно белый</p>
@@ -217,7 +267,7 @@
                     <a href="" data-lightbox='ready5'></a>
                     <a href="" data-lightbox='ready5'></a>
                 </div>
-                <div class="col-1 animate" data-color='Бежевый' data-material='Рогожка'>
+                <div class="col-xl-1 col-md-2 animate" data-color='Бежевый' data-material='Рогожка'>
                     <a href="" data-lightbox='ready6' class="ready__ligth">
                         <img src="images/ready6.png" alt="">
                         <p>Абсолютно белый</p>
@@ -227,7 +277,7 @@
                     <a href="" data-lightbox='ready6'></a>
                     <a href="" data-lightbox='ready6'></a>
                 </div>
-                <div class="col-1 animate" data-color='Коричневый' data-material='Экокожа'>
+                <div class="col-xl-1 col-md-2 animate" data-color='Коричневый' data-material='Экокожа'>
                     <a href="" data-lightbox='ready7' class="ready__ligth">
                         <img src="images/ready7.png" alt="">
                         <p>Абсолютно белый</p>
@@ -237,7 +287,7 @@
                     <a href="" data-lightbox='ready7'></a>
                     <a href="" data-lightbox='ready7'></a>
                 </div>
-                <div class="col-1 animate" data-color='Синий' data-material='Велюр'>
+                <div class="col-xl-1 col-md-2 animate" data-color='Синий' data-material='Велюр'>
                     <a href="" data-lightbox='ready8' class="ready__ligth">
                         <img src="images/ready8.png" alt="">
                         <p>Абсолютно белый</p>
@@ -247,7 +297,7 @@
                     <a href="" data-lightbox='ready8'></a>
                     <a href="" data-lightbox='ready8'></a>
                 </div>
-                <div class="col-1 animate" data-color='Зеленый' data-material='Велюр'>
+                <div class="col-xl-1 col-md-2 animate" data-color='Зеленый' data-material='Велюр'>
                     <a href="" data-lightbox='ready9' class="ready__ligth">
                         <img src="images/ready9.png" alt="">
                         <p>Абсолютно белый</p>
@@ -257,7 +307,7 @@
                     <a href="" data-lightbox='ready9'></a>
                     <a href="" data-lightbox='ready9'></a>
                 </div>
-                <div class="col-1 animate" data-color='Разноцветный' data-material=''>
+                <div class="col-xl-1 col-md-2 animate" data-color='Разноцветный' data-material=''>
                     <a href="" data-lightbox='ready10' class="ready__ligth">
                         <img src="images/ready10.png" alt="">
                         <p>Абсолютно белый</p>
@@ -267,7 +317,7 @@
                     <a href="" data-lightbox='ready10'></a>
                     <a href="" data-lightbox='ready10'></a>
                 </div>
-                <div class="col-1 animate" data-color='Белый' data-material='Хлопок'>
+                <div class="col-xl-1 col-md-2 animate" data-color='Белый' data-material='Хлопок'>
                     <a href="" data-lightbox='ready11' class="ready__ligth">
                         <img src="images/ready11.png" alt="">
                         <p>Абсолютно белый</p>
@@ -277,7 +327,7 @@
                     <a href="" data-lightbox='ready11'></a>
                     <a href="" data-lightbox='ready11'></a>
                 </div>
-                <div class="col-1 animate" data-color='Белый' data-material='Велюр'>
+                <div class="col-xl-1 col-md-2 animate" data-color='Белый' data-material='Велюр'>
                     <a href="" data-lightbox='ready12' class="ready__ligth">
                         <img src="images/ready12.png" alt="">
                         <p>Абсолютно белый</p>
@@ -287,7 +337,7 @@
                     <a href="" data-lightbox='ready12'></a>
                     <a href="" data-lightbox='ready12'></a>
                 </div>
-                <div class="col-1 animate" data-color='Белый' data-material='Хлопок'>
+                <div class="col-xl-1 col-md-2 animate" data-color='Белый' data-material='Хлопок'>
                     <a href="images/cat1.png" data-lightbox='ready1' class="ready__ligth">
                         <img src="images/ready1.png" alt="">
                         <p>Абсолютно белый</p>
@@ -297,7 +347,7 @@
                     <a href="images/cat3.png" data-lightbox='ready1'></a>
                     <a href="images/cat1.png" data-lightbox='ready1'></a>
                 </div>
-                <div class="col-1 animate" data-color='Серый' data-material='Лен'>
+                <div class="col-xl-1 col-md-2 animate" data-color='Серый' data-material='Лен'>
                     <a href="images/cat2.png" data-lightbox='ready2' class="ready__ligth">
                         <img src="images/ready2.png" alt="">
                         <p>Абсолютно белый</p>
@@ -307,7 +357,7 @@
                     <a href="images/cat2.png" data-lightbox='ready2'></a>
                     <a href="images/cat2.png" data-lightbox='ready2'></a>
                 </div>
-                <div class="col-1 animate" data-color='Черный' data-material='Микровельвет'>
+                <div class="col-xl-1 col-md-2 animate" data-color='Черный' data-material='Микровельвет'>
                     <a href="" data-lightbox='ready3' class="ready__ligth">
                         <img src="images/ready3.png" alt="">
                         <p>Абсолютно белый</p>
@@ -317,7 +367,7 @@
                     <a href="images/cat3.png" data-lightbox='ready3'></a>
                     <a href="images/cat3.png" data-lightbox='ready3'></a>
                 </div>
-                <div class="col-1 animate" data-color='Красный' data-material='Велюр'>
+                <div class="col-xl-1 col-md-2 animate" data-color='Красный' data-material='Велюр'>
                     <a href="images/cat4.png" data-lightbox='ready4' class="ready__ligth">
                         <img src="images/ready4.png" alt="">
                         <p>Абсолютно белый</p>
@@ -327,7 +377,7 @@
                     <a href="images/cat4.png" data-lightbox='ready4'></a>
                     <a href="images/cat4.png" data-lightbox='ready4'></a>
                 </div>
-                <div class="col-1 animate" data-color='Желтый' data-material='Антикоготь'>
+                <div class="col-xl-1 col-md-2 animate" data-color='Желтый' data-material='Антикоготь'>
                     <a href="" data-lightbox='ready5' class="ready__ligth">
                         <img src="images/ready5.png" alt="">
                         <p>Абсолютно белый</p>
@@ -337,7 +387,7 @@
                     <a href="" data-lightbox='ready5'></a>
                     <a href="" data-lightbox='ready5'></a>
                 </div>
-                <div class="col-1 animate" data-color='Бежевый' data-material='Рогожка'>
+                <div class="col-xl-1 col-md-2 animate" data-color='Бежевый' data-material='Рогожка'>
                     <a href="" data-lightbox='ready6' class="ready__ligth">
                         <img src="images/ready6.png" alt="">
                         <p>Абсолютно белый</p>
@@ -347,7 +397,7 @@
                     <a href="" data-lightbox='ready6'></a>
                     <a href="" data-lightbox='ready6'></a>
                 </div>
-                <div class="col-1 animate" data-color='Коричневый' data-material='Экокожа'>
+                <div class="col-xl-1 col-md-2 animate" data-color='Коричневый' data-material='Экокожа'>
                     <a href="" data-lightbox='ready7' class="ready__ligth">
                         <img src="images/ready7.png" alt="">
                         <p>Абсолютно белый</p>
@@ -357,7 +407,7 @@
                     <a href="" data-lightbox='ready7'></a>
                     <a href="" data-lightbox='ready7'></a>
                 </div>
-                <div class="col-1 animate" data-color='Синий' data-material='Велюр'>
+                <div class="col-xl-1 col-md-2 animate" data-color='Синий' data-material='Велюр'>
                     <a href="" data-lightbox='ready8' class="ready__ligth">
                         <img src="images/ready8.png" alt="">
                         <p>Абсолютно белый</p>
@@ -367,7 +417,7 @@
                     <a href="" data-lightbox='ready8'></a>
                     <a href="" data-lightbox='ready8'></a>
                 </div>
-                <div class="col-1 animate" data-color='Зеленый' data-material='Лен'>
+                <div class="col-xl-1 col-md-2 animate" data-color='Зеленый' data-material='Лен'>
                     <a href="" data-lightbox='ready9' class="ready__ligth">
                         <img src="images/ready9.png" alt="">
                         <p>Абсолютно белый</p>
@@ -377,7 +427,7 @@
                     <a href="" data-lightbox='ready9'></a>
                     <a href="" data-lightbox='ready9'></a>
                 </div>
-                <div class="col-1 animate" data-color='Разноцветный' data-material=''>
+                <div class="col-xl-1 col-md-2 animate" data-color='Разноцветный' data-material=''>
                     <a href="" data-lightbox='ready10' class="ready__ligth">
                         <img src="images/ready10.png" alt="">
                         <p>Абсолютно белый</p>
@@ -387,7 +437,7 @@
                     <a href="" data-lightbox='ready10'></a>
                     <a href="" data-lightbox='ready10'></a>
                 </div>
-                <div class="col-1 animate" data-color='Белый' data-material=''>
+                <div class="col-xl-1 col-md-2 animate" data-color='Белый' data-material=''>
                     <a href="" data-lightbox='ready11' class="ready__ligth">
                         <img src="images/ready11.png" alt="">
                         <p>Абсолютно белый</p>
@@ -397,7 +447,7 @@
                     <a href="" data-lightbox='ready11'></a>
                     <a href="" data-lightbox='ready11'></a>
                 </div>
-                <div class="col-1 animate" data-color='Белый' data-material=''>
+                <div class="col-xl-1 col-md-2 animate" data-color='Белый' data-material=''>
                     <a href="" data-lightbox='ready12' class="ready__ligth">
                         <img src="images/ready12.png" alt="">
                         <p>Абсолютно белый</p>
@@ -407,7 +457,7 @@
                     <a href="" data-lightbox='ready12'></a>
                     <a href="" data-lightbox='ready12'></a>
                 </div>
-                <div class="col-1 animate" data-color='Белый' data-material='Хлопок'>
+                <div class="col-xl-1 col-md-2 animate" data-color='Белый' data-material='Хлопок'>
                     <a href="images/cat1.png" data-lightbox='ready1' class="ready__ligth">
                         <img src="images/ready1.png" alt="">
                         <p>Абсолютно белый</p>
@@ -417,7 +467,7 @@
                     <a href="images/cat3.png" data-lightbox='ready1'></a>
                     <a href="images/cat1.png" data-lightbox='ready1'></a>
                 </div>
-                <div class="col-1 animate" data-color='Серый' data-material='Лен'>
+                <div class="col-xl-1 col-md-2 animate" data-color='Серый' data-material='Лен'>
                     <a href="images/cat2.png" data-lightbox='ready2' class="ready__ligth">
                         <img src="images/ready2.png" alt="">
                         <p>Абсолютно белый</p>
@@ -427,7 +477,7 @@
                     <a href="images/cat2.png" data-lightbox='ready2'></a>
                     <a href="images/cat2.png" data-lightbox='ready2'></a>
                 </div>
-                <div class="col-1 animate" data-color='Черный' data-material='Микровельвет'>
+                <div class="col-xl-1 col-md-2 animate" data-color='Черный' data-material='Микровельвет'>
                     <a href="" data-lightbox='ready3' class="ready__ligth">
                         <img src="images/ready3.png" alt="">
                         <p>Абсолютно белый</p>
@@ -437,7 +487,7 @@
                     <a href="images/cat3.png" data-lightbox='ready3'></a>
                     <a href="images/cat3.png" data-lightbox='ready3'></a>
                 </div>
-                <div class="col-1 animate" data-color='Красный' data-material='Велюр'>
+                <div class="col-xl-1 col-md-2 animate" data-color='Красный' data-material='Велюр'>
                     <a href="images/cat4.png" data-lightbox='ready4' class="ready__ligth">
                         <img src="images/ready4.png" alt="">
                         <p>Абсолютно белый</p>
@@ -447,7 +497,7 @@
                     <a href="images/cat4.png" data-lightbox='ready4'></a>
                     <a href="images/cat4.png" data-lightbox='ready4'></a>
                 </div>
-                <div class="col-1 animate" data-color='Желтый' data-material='Антикоготь'>
+                <div class="col-xl-1 col-md-2 animate" data-color='Желтый' data-material='Антикоготь'>
                     <a href="" data-lightbox='ready5' class="ready__ligth">
                         <img src="images/ready5.png" alt="">
                         <p>Абсолютно белый</p>
@@ -457,7 +507,7 @@
                     <a href="" data-lightbox='ready5'></a>
                     <a href="" data-lightbox='ready5'></a>
                 </div>
-                <div class="col-1 animate" data-color='Бежевый' data-material='Рогожка'>
+                <div class="col-xl-1 col-md-2 animate" data-color='Бежевый' data-material='Рогожка'>
                     <a href="" data-lightbox='ready6' class="ready__ligth">
                         <img src="images/ready6.png" alt="">
                         <p>Абсолютно белый</p>
@@ -467,7 +517,7 @@
                     <a href="" data-lightbox='ready6'></a>
                     <a href="" data-lightbox='ready6'></a>
                 </div>
-                <div class="col-1 animate" data-color='Коричневый' data-material='Экокожа'>
+                <div class="col-xl-1 col-md-2 animate" data-color='Коричневый' data-material='Экокожа'>
                     <a href="" data-lightbox='ready7' class="ready__ligth">
                         <img src="images/ready7.png" alt="">
                         <p>Абсолютно белый</p>
@@ -477,7 +527,7 @@
                     <a href="" data-lightbox='ready7'></a>
                     <a href="" data-lightbox='ready7'></a>
                 </div>
-                <div class="col-1 animate" data-color='Синий' data-material=''>
+                <div class="col-xl-1 col-md-2 animate" data-color='Синий' data-material=''>
                     <a href="" data-lightbox='ready8' class="ready__ligth">
                         <img src="images/ready8.png" alt="">
                         <p>Абсолютно белый</p>
@@ -487,7 +537,7 @@
                     <a href="" data-lightbox='ready8'></a>
                     <a href="" data-lightbox='ready8'></a>
                 </div>
-                <div class="col-1 animate" data-color='Зеленый' data-material=''>
+                <div class="col-xl-1 col-md-2 animate" data-color='Зеленый' data-material=''>
                     <a href="" data-lightbox='ready9' class="ready__ligth">
                         <img src="images/ready9.png" alt="">
                         <p>Абсолютно белый</p>
@@ -497,7 +547,7 @@
                     <a href="" data-lightbox='ready9'></a>
                     <a href="" data-lightbox='ready9'></a>
                 </div>
-                <div class="col-1 animate" data-color='Разноцветный' data-material=''>
+                <div class="col-xl-1 col-md-2 animate" data-color='Разноцветный' data-material=''>
                     <a href="" data-lightbox='ready10' class="ready__ligth">
                         <img src="images/ready10.png" alt="">
                         <p>Абсолютно белый</p>
@@ -507,7 +557,7 @@
                     <a href="" data-lightbox='ready10'></a>
                     <a href="" data-lightbox='ready10'></a>
                 </div>
-                <div class="col-1 animate" data-color='Белый' data-material=''>
+                <div class="col-xl-1 col-md-2 animate" data-color='Белый' data-material=''>
                     <a href="" data-lightbox='ready11' class="ready__ligth">
                         <img src="images/ready11.png" alt="">
                         <p>Абсолютно белый</p>
@@ -517,7 +567,7 @@
                     <a href="" data-lightbox='ready11'></a>
                     <a href="" data-lightbox='ready11'></a>
                 </div>
-                <div class="col-1 animate" data-color='Белый' data-material=''>
+                <div class="col-xl-1 col-md-2 animate" data-color='Белый' data-material=''>
                     <a href="" data-lightbox='ready12' class="ready__ligth">
                         <img src="images/ready12.png" alt="">
                         <p>Абсолютно белый</p>
@@ -527,7 +577,7 @@
                     <a href="" data-lightbox='ready12'></a>
                     <a href="" data-lightbox='ready12'></a>
                 </div>
-                <div class="col-1 animate" data-color='Белый' data-material='Хлопок'>
+                <div class="col-xl-1 col-md-2 animate" data-color='Белый' data-material='Хлопок'>
                     <a href="images/cat1.png" data-lightbox='ready1' class="ready__ligth">
                         <img src="images/ready1.png" alt="">
                         <p>Абсолютно белый</p>
@@ -537,7 +587,7 @@
                     <a href="images/cat3.png" data-lightbox='ready1'></a>
                     <a href="images/cat1.png" data-lightbox='ready1'></a>
                 </div>
-                <div class="col-1 animate" data-color='Серый' data-material='Лен'>
+                <div class="col-xl-1 col-md-2 animate" data-color='Серый' data-material='Лен'>
                     <a href="images/cat2.png" data-lightbox='ready2' class="ready__ligth">
                         <img src="images/ready2.png" alt="">
                         <p>Абсолютно белый</p>
@@ -547,7 +597,7 @@
                     <a href="images/cat2.png" data-lightbox='ready2'></a>
                     <a href="images/cat2.png" data-lightbox='ready2'></a>
                 </div>
-                <div class="col-1 animate" data-color='Черный' data-material='Микровельвет'>
+                <div class="col-xl-1 col-md-2 animate" data-color='Черный' data-material='Микровельвет'>
                     <a href="" data-lightbox='ready3' class="ready__ligth">
                         <img src="images/ready3.png" alt="">
                         <p>Абсолютно белый</p>
@@ -557,7 +607,7 @@
                     <a href="images/cat3.png" data-lightbox='ready3'></a>
                     <a href="images/cat3.png" data-lightbox='ready3'></a>
                 </div>
-                <div class="col-1 animate" data-color='Красный' data-material='Велюр'>
+                <div class="col-xl-1 col-md-2 animate" data-color='Красный' data-material='Велюр'>
                     <a href="images/cat4.png" data-lightbox='ready4' class="ready__ligth">
                         <img src="images/ready4.png" alt="">
                         <p>Абсолютно белый</p>
@@ -567,7 +617,7 @@
                     <a href="images/cat4.png" data-lightbox='ready4'></a>
                     <a href="images/cat4.png" data-lightbox='ready4'></a>
                 </div>
-                <div class="col-1 animate" data-color='Желтый' data-material='Антикоготь'>
+                <div class="col-xl-1 col-md-2 animate" data-color='Желтый' data-material='Антикоготь'>
                     <a href="" data-lightbox='ready5' class="ready__ligth">
                         <img src="images/ready5.png" alt="">
                         <p>Абсолютно белый</p>
@@ -577,7 +627,7 @@
                     <a href="" data-lightbox='ready5'></a>
                     <a href="" data-lightbox='ready5'></a>
                 </div>
-                <div class="col-1 animate" data-color='Бежевый' data-material='Рогожка'>
+                <div class="col-xl-1 col-md-2 animate" data-color='Бежевый' data-material='Рогожка'>
                     <a href="" data-lightbox='ready6' class="ready__ligth">
                         <img src="images/ready6.png" alt="">
                         <p>Абсолютно белый</p>
@@ -587,7 +637,7 @@
                     <a href="" data-lightbox='ready6'></a>
                     <a href="" data-lightbox='ready6'></a>
                 </div>
-                <div class="col-1 animate" data-color='Коричневый' data-material='Экокожа'>
+                <div class="col-xl-1 col-md-2 animate" data-color='Коричневый' data-material='Экокожа'>
                     <a href="" data-lightbox='ready7' class="ready__ligth">
                         <img src="images/ready7.png" alt="">
                         <p>Абсолютно белый</p>
@@ -597,7 +647,7 @@
                     <a href="" data-lightbox='ready7'></a>
                     <a href="" data-lightbox='ready7'></a>
                 </div>
-                <div class="col-1 animate" data-color='Синий' data-material=''>
+                <div class="col-xl-1 col-md-2 animate" data-color='Синий' data-material=''>
                     <a href="" data-lightbox='ready8' class="ready__ligth">
                         <img src="images/ready8.png" alt="">
                         <p>Абсолютно белый</p>
@@ -607,7 +657,7 @@
                     <a href="" data-lightbox='ready8'></a>
                     <a href="" data-lightbox='ready8'></a>
                 </div>
-                <div class="col-1 animate" data-color='Зеленый' data-material=''>
+                <div class="col-xl-1 col-md-2 animate" data-color='Зеленый' data-material=''>
                     <a href="" data-lightbox='ready9' class="ready__ligth">
                         <img src="images/ready9.png" alt="">
                         <p>Абсолютно белый</p>
@@ -617,7 +667,7 @@
                     <a href="" data-lightbox='ready9'></a>
                     <a href="" data-lightbox='ready9'></a>
                 </div>
-                <div class="col-1 animate" data-color='Разноцветный' data-material=''>
+                <div class="col-xl-1 col-md-2 animate" data-color='Разноцветный' data-material=''>
                     <a href="" data-lightbox='ready10' class="ready__ligth">
                         <img src="images/ready10.png" alt="">
                         <p>Абсолютно белый</p>
@@ -627,7 +677,7 @@
                     <a href="" data-lightbox='ready10'></a>
                     <a href="" data-lightbox='ready10'></a>
                 </div>
-                <div class="col-1 animate" data-color='Белый' data-material=''>
+                <div class="col-xl-1 col-md-2 animate" data-color='Белый' data-material=''>
                     <a href="" data-lightbox='ready11' class="ready__ligth">
                         <img src="images/ready11.png" alt="">
                         <p>Абсолютно белый</p>
@@ -637,7 +687,7 @@
                     <a href="" data-lightbox='ready11'></a>
                     <a href="" data-lightbox='ready11'></a>
                 </div>
-                <div class="col-1 animate" data-color='Белый' data-material=''>
+                <div class="col-xl-1 col-md-2 animate" data-color='Белый' data-material=''>
                     <a href="" data-lightbox='ready12' class="ready__ligth">
                         <img src="images/ready12.png" alt="">
                         <p>Абсолютно белый</p>
@@ -670,10 +720,11 @@
         </div>
     </div>
 </main>
+
 <footer>
     <div class="container">
         <div class="row">
-            <div class="col-lg-2">
+            <div class="col-lg-2 col-sm-6">
                 <div class="footer__firstBlook">
                     <img src="images/logoFoot.png" alt="">
                     <div class="footer__pk">
@@ -683,7 +734,19 @@
                     </div>
                 </div>
             </div>
-            <div class="col-lg-2">
+            <div class="col-lg-2 d-lg-block d-none">
+                <div class="footer__title">ПО КАТЕГОРИИ</div>
+                <ul class="footer__menu">
+                    <li><a href="">Чехлы для подлокотников</a></li>
+                    <li><a href="catalog.html">Чехлы для диванов</a></li>
+                    <li><a href="">Чехлы для кресел</a></li>
+    
+                    <li><a href="">Чехлы для стульев</a></li>
+                    <li><a href="">Чехлы для пуфиков</a></li>
+                    <li><a href="">Чехлы для подушек</a></li>
+                </ul>
+            </div>
+            <div class="col-lg-2 d-lg-block d-none">
                 <div class="footer__title">ПО КАТЕГОРИИ</div>
                 <ul class="footer__menu">
                     <li><a href="">Чехлы для подлокотников</a></li>
@@ -695,19 +758,7 @@
                     <li><a href="">Чехлы для подушек</a></li>
                 </ul>
             </div>
-            <div class="col-lg-2">
-                <div class="footer__title">ПО КАТЕГОРИИ</div>
-                <ul class="footer__menu">
-                    <li><a href="">Чехлы для подлокотников</a></li>
-                    <li><a href="">Чехлы для диванов</a></li>
-                    <li><a href="">Чехлы для кресел</a></li>
-    
-                    <li><a href="">Чехлы для стульев</a></li>
-                    <li><a href="">Чехлы для пуфиков</a></li>
-                    <li><a href="">Чехлы для подушек</a></li>
-                </ul>
-            </div>
-            <div class="col-lg-2">
+            <div class="col-lg-2 d-lg-block d-none">
                 <div class="footer__title">ПО СЕРИИ</div>
                 <ul class="footer__menu">
                     <li><a href="">Серия Экторп</a></li>
@@ -718,7 +769,7 @@
                     <li><a href="">Другие серии</a></li>
                 </ul>
             </div>
-            <div class="col-lg-2">
+            <div class="col-lg-2 d-lg-block d-none">
                 <div class="footer__title">ПОКУПАТЕЛЯМ</div>
                 <ul class="footer__menu">
                     <li><a href="">Вопросы</a></li>
@@ -729,7 +780,7 @@
                     <li><a href="">Блог</a></li>
                 </ul>
             </div>
-            <div class="col-lg-2">
+            <div class="col-lg-2 col-sm-6">
                 <div class="footer__title">КОНТАКТЫ</div>
                 <div class="footer__contact">
                     <a href="">+7 (499) 702-45-59</a>
@@ -748,12 +799,18 @@
 <link rel="stylesheet" href="css/slick.css"/>
 <link rel="stylesheet" href="css/slick-theme.css"/>
 <link rel="stylesheet" href="css/lightbox.min.css"/>
-<link rel="stylesheet" href="css/main.css">
+<link media="screen and (min-width: 1201px) and (max-width: 9000px)" type="text/css" rel="stylesheet" href="css/main.css" />
+<link media="screen and (min-width: 993px) and (max-width: 1200px)" type="text/css" rel="stylesheet" href="css/main_1200.css" />
+<link media="screen and (min-width: 769px) and (max-width: 992px)" type="text/css" rel="stylesheet" href="css/main_992.css" />
+<link media="screen and (min-width: 577px) and (max-width: 768px)" type="text/css" rel="stylesheet" href="css/main_767.css" />
+<link media="screen and (max-width: 576px)" type="text/css" rel="stylesheet" href="css/main_576.css" />
 <script defer src="js/jquery-3.4.1.min.js"></script>
 <script defer src="js/popper.min.js"></script>
 <script defer src="js/bootstrap.min.js"></script>
 <script defer src="js/slick.min.js"></script>
 <script defer src="js/lightbox.min.js"></script>
+<script defer src="js/mask.js"></script>
+<script defer src="js/gotovye-cveta.js"></script>
 <script defer src="js/script.js"></script>
 </body>
 </html>

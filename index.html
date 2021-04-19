@@ -6,12 +6,11 @@
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
 	<link rel="stylesheet" href="css/bootstrap.min.css">
-    <link rel="stylesheet" href="css/first.css">
-    <!-- <link rel="stylesheet" href="css/first_1200.css">
-    <link rel="stylesheet" href="css/first_992.css">
-    <link rel="stylesheet" href="css/first_768.css">
-    <link rel="stylesheet" href="css/first_576.css">
-    <link rel="stylesheet" href="css/first_400.css"> -->
+    <link media="screen and (min-width: 1201px) and (max-width: 9000px)" type="text/css" rel="stylesheet" href="css/first.css" />
+    <link media="screen and (min-width: 993px) and (max-width: 1200px)" type="text/css" rel="stylesheet" href="css/first_1200.css" />
+    <link media="screen and (min-width: 769px) and (max-width: 992px)" type="text/css" rel="stylesheet" href="css/first_992.css" />
+    <link media="screen and (min-width: 577px) and (max-width: 768px)" type="text/css" rel="stylesheet" href="css/first_767.css" />
+    <link media="screen and (max-width: 576px)" type="text/css" rel="stylesheet" href="css/first_576.css" />
     <link rel="stylesheet" href="css/fonts/stylesheet.css">
     <title></title>
 </head>
@@ -95,13 +94,59 @@
                 </div>
             </div>
         </div>
+        <div class="mobile__headrow">
+            <div class="row">
+                <div class="col-md-3 col-6">
+                    <a href="/" class="mobile__logo"><img src="images/logoMobile.png" alt=""></a>
+                    <div class="burgerButt">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </div>
+                </div>
+                <div class="col-md-3 col-6"><a href="tel:+74997024559" class="mobile__telHead">+7 (499) 702-45-59</a></div>
+                <div class="col-md-6 col-12">
+                    <div class="mobile__icon_link">
+                        <a href="" class="lkHead"></a>
+                        <a href="" class="cart"></a>
+                        <a href="" class="facebook"></a>
+                        <a href="" class="vk"></a>
+                        <a href="" class="insta"></a>
+                    </div>
+                </div>
+            </div>
+            <nav class="mobile__menu">
+                <div class="callback">Заказать звонок</div>
+                <ul>
+                    <li class="mobile__first" id="scrollCatalog"><a href="/#catalog">Каталог</a></li>
+                    <li class="mobile__first"><a href="">Распродажа</a></li>
+                    <li class="mobile__first"><a href="">Бесплатные образцы</a></li>
+                    <li class="mobile__first"><a href="">О компании</a></li>
+                    <li class="mobile__first mobile__hasChild">
+                        <div class="mobile__hasChild__head">Покупателям</div>
+                        <div class="mobile__hasChild__body">
+                            <ul>
+                                <li><a href="">Вопросы</a></li>
+                                <li><a href="">Доставка</a></li>
+                                <li><a href="">Оплата</a></li>
+                                <li><a href="">Гарантия</a></li>
+                                <li><a href="">Уход за изделиями</a></li>
+                                <li><a href="">Организациям</a></li>
+                                <li><a href="">Блог</a></li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li class="mobile__first"><a href="">Контакты</a></li>
+                </ul>
+            </nav>
+        </div>
     </div>
 </header>
 <main>
     <!-- fisrt__screen s -->
     <div class="container __custom">
         <div class="row">
-            <div class="col-4">
+            <div class="col-md-4 d-md-block d-none">
                 <div class="firstScreen__slider__left">
                     <div class="firstScreen__slide__left">
                         <div class="firstScreen__slide__left__container">
@@ -123,11 +168,11 @@
                     </div>
                 </div>
             </div>
-            <div class="col-3">
+            <div class="col-md-3 col-sm-5">
                 <h1 class="homeTitle"><span class="chechly">Чехлы </span> <span class="dlya">для </span><span class="mebely">мебели </span><span class="ikea">икеа</span></h1>
                 <a href="#" class="goCatalog">В каталог</a>
             </div>
-            <div class="col-5">
+            <div class="col-md-5 col-sm-7 __mobilePaddingRigth">
                 <div class="firstScreen__slider__rigth" dir="rtl">
                     <div class="firstScreen__slide__rigth">
                         <div class="firstScreen__slide__rigth__container">
@@ -176,12 +221,12 @@
     </div>
     <!-- fisrt__screen e -->
     <!-- catalog_main s -->
-    <div class="catalog_on_main">
+    <div class="catalog_on_main" id="catalog">
         <div class="container">
                 <div class="row">
-                    <div class="col-lg-5">
+                    <div class="col-xl-5 col-md-6">
                         <div class="row">
-                            <div class="col-12">
+                            <div class="col-md-12 col-sm-6 order-sm-1">
                                 <a href="#" class="categoryOnMain__container">
                                     <img src="/images/cat1.png" alt="">
                                     <div class="categoryOnMain__absolute">
@@ -190,7 +235,7 @@
                                     </div>
                                 </a>
                             </div>
-                            <div class="col-12">
+                            <div class="col-12 order-sm-3">
                                 <a href="#" class="categoryOnMain__container">
                                     <img src="/images/cat2.png" alt="">
                                     <div class="categoryOnMain__absolute">
@@ -199,7 +244,7 @@
                                     </div>
                                 </a>
                             </div>
-                            <div class="col-12">
+                            <div class="col-md-12 col-sm-6 order-sm-2">
                                 <a href="#" class="categoryOnMain__container">
                                     <img src="/images/cat3.png" alt="">
                                     <div class="categoryOnMain__absolute">
@@ -210,9 +255,9 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col-lg-4">
+                    <div class="col-xl-4 col-md-6">
                         <div class="row">
-                            <div class="col-12">
+                            <div class="col-md-12 col-sm-6">
                                 <a href="#" class="categoryOnMain__container mar19b">
                                     <img src="/images/cat4.png" alt="">
                                     <div class="categoryOnMain__absolute">
@@ -221,7 +266,7 @@
                                     </div>
                                 </a>
                             </div>
-                            <div class="col-12">
+                            <div class="col-md-12 col-sm-6">
                                 <a href="#" class="categoryOnMain__container">
                                     <img src="/images/cat5.png" alt="">
                                     <div class="categoryOnMain__absolute">
@@ -232,9 +277,9 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col-lg-3">
+                    <div class="col-xl-3 col-md-12">
                         <div class="row">
-                            <div class="col-12">
+                            <div class="col-xl-12 col-sm-6">
                                 <a href="#" class="categoryOnMain__container mar19b">
                                     <img src="/images/cat6.png" alt="">
                                     <div class="categoryOnMain__absolute">
@@ -243,7 +288,7 @@
                                     </div>
                                 </a>
                             </div>
-                            <div class="col-12">
+                            <div class="col-xl-12 col-sm-6">
                                 <a href="#" class="categoryOnMain__container">
                                     <img src="/images/cat7.png" alt="">
                                     <div class="categoryOnMain__absolute">
@@ -254,7 +299,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col-lg-3">
+                    <div class="col-lg-3 col-sm-6">
                         <a href="#" class="categoryOnMain__container">
                             <img src="/images/cat8.png" alt="">
                             <div class="categoryOnMain__absolute ">
@@ -263,7 +308,7 @@
                             </div>
                         </a>
                     </div>
-                    <div class="col-lg-3">
+                    <div class="col-lg-3 col-sm-6">
                         <a href="#" class="categoryOnMain__container ">
                             <img src="/images/cat9.png" alt="">
                             <div class="categoryOnMain__absolute ">
@@ -272,7 +317,7 @@
                             </div>
                         </a>
                     </div>
-                    <div class="col-lg-3">
+                    <div class="col-lg-3 col-sm-6">
                         <a href="#" class="categoryOnMain__container">
                             <img src="/images/cat10.png" alt="">
                             <div class="categoryOnMain__absolute ">
@@ -281,7 +326,7 @@
                             </div>
                         </a>
                     </div>
-                    <div class="col-lg-3">
+                    <div class="col-lg-3 col-sm-6">
                         <a href="#" class="categoryOnMain__container">
                             <img src="/images/cat11.png" alt="">
                             <div class="categoryOnMain__absolute ">
@@ -405,7 +450,7 @@
 <footer>
     <div class="container">
         <div class="row">
-            <div class="col-lg-2">
+            <div class="col-lg-2 col-sm-6">
                 <div class="footer__firstBlook">
                     <img src="images/logoFoot.png" alt="">
                     <div class="footer__pk">
@@ -415,7 +460,7 @@
                     </div>
                 </div>
             </div>
-            <div class="col-lg-2">
+            <div class="col-lg-2 d-lg-block d-none">
                 <div class="footer__title">ПО КАТЕГОРИИ</div>
                 <ul class="footer__menu">
                     <li><a href="">Чехлы для подлокотников</a></li>
@@ -427,7 +472,7 @@
                     <li><a href="">Чехлы для подушек</a></li>
                 </ul>
             </div>
-            <div class="col-lg-2">
+            <div class="col-lg-2 d-lg-block d-none">
                 <div class="footer__title">ПО КАТЕГОРИИ</div>
                 <ul class="footer__menu">
                     <li><a href="">Чехлы для подлокотников</a></li>
@@ -439,7 +484,7 @@
                     <li><a href="">Чехлы для подушек</a></li>
                 </ul>
             </div>
-            <div class="col-lg-2">
+            <div class="col-lg-2 d-lg-block d-none">
                 <div class="footer__title">ПО СЕРИИ</div>
                 <ul class="footer__menu">
                     <li><a href="">Серия Экторп</a></li>
@@ -450,7 +495,7 @@
                     <li><a href="">Другие серии</a></li>
                 </ul>
             </div>
-            <div class="col-lg-2">
+            <div class="col-lg-2 d-lg-block d-none">
                 <div class="footer__title">ПОКУПАТЕЛЯМ</div>
                 <ul class="footer__menu">
                     <li><a href="">Вопросы</a></li>
@@ -461,7 +506,7 @@
                     <li><a href="">Блог</a></li>
                 </ul>
             </div>
-            <div class="col-lg-2">
+            <div class="col-lg-2 col-sm-6">
                 <div class="footer__title">КОНТАКТЫ</div>
                 <div class="footer__contact">
                     <a href="">+7 (499) 702-45-59</a>
@@ -477,15 +522,43 @@
         </div>
     </div>
 </footer>
+<div class="modal" tabindex="-1" role="dialog" id="callback__modal">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <h5 class="modal-title">Заказать звонок</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">×</span>
+            </button>
+            <form id="callback__form">
+                <div class="contact__block">
+                    <input type="text" name="name" placeholder="Имя">
+                    <input type="text" name="surname" placeholder="Фамилия">
+                    <input type="email" name="email" placeholder="Email">
+                    <input type="text" name="phone" class="maskPhone" placeholder="+7 (___) ___-__-__">
+                </div>
+                <div class="bottom__colunm">
+                    <input type="submit" value="Отправить">
+                    <p>Нажимая на кнопку вы соглашаететсь с <a href="/pk.pdf" target="_blank">политикой конфиденциальности</a></p>
+                </div>
+            </form>
+            <p class="response"></p>
+        </div>
+    </div>
+</div>
 <link rel="stylesheet" href="css/slick.css"/>
 <link rel="stylesheet" href="css/slick-theme.css"/>
 <link rel="stylesheet" href="css/lightbox.min.css"/>
-<link rel="stylesheet" href="css/main.css">
+<link media="screen and (min-width: 1201px) and (max-width: 9000px)" type="text/css" rel="stylesheet" href="css/main.css" />
+<link media="screen and (min-width: 993px) and (max-width: 1200px)" type="text/css" rel="stylesheet" href="css/main_1200.css" />
+<link media="screen and (min-width: 769px) and (max-width: 992px)" type="text/css" rel="stylesheet" href="css/main_992.css" />
+<link media="screen and (min-width: 577px) and (max-width: 768px)" type="text/css" rel="stylesheet" href="css/main_767.css" />
+<link media="screen and (max-width: 576px)" type="text/css" rel="stylesheet" href="css/main_576.css" />
 <script defer src="js/jquery-3.4.1.min.js"></script>
 <script defer src="js/popper.min.js"></script>
 <script defer src="js/bootstrap.min.js"></script>
 <script defer src="js/slick.min.js"></script>
 <script defer src="js/lightbox.min.js"></script>
+<script defer src="js/mask.js"></script>
 <script defer src="js/script.js"></script>
 </body>
 </html>

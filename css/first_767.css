@@ -5,14 +5,6 @@ body{
     outline: none!important;
 }
 .headrow{
-    display: flex;
-    justify-content: space-between;
-    align-items: flex-start;
-    margin-top: 26px;
-    position: relative;
-    z-index: 2;
-}
-.mobile__headrow{
     display: none;
 }
 main{
@@ -20,92 +12,6 @@ main{
 }
 img{
     max-width: 100%;
-}
-.mainMenu{
-    display: flex;
-    justify-content: flex-start;
-    margin-top: 11px;
-}
-.contact_block{
-    margin-top: 11px;
-    text-align: right;
-}
-.mainMenu li{
-    list-style-type: none;
-}
-.mainMenu .firstLevel{
-    margin-right: 32px;
-    padding-bottom: 5px;
-    font-weight: 450;
-    font-size: 15px;
-    line-height: 19px;
-    color: #0F0F0F;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-.mainMenu .firstLevel:hover{
-    border-bottom: 1px solid #6D8953;
-}
-.mainMenu p{
-    margin-bottom: 0;
-}
-.lkHead{
-    width: 25px;
-    height: 25px;
-    background: url(../images/lk.png) center no-repeat;
-    display: block;
-    cursor: pointer;
-}
-.cart{
-    width: 25px;
-    height: 25px;
-    background: url(../images/card.png) center no-repeat;
-    display: block;
-    cursor: pointer;
-    margin-left: 15px;
-}
-.icon_link{
-    display: flex;
-    justify-content: flex-start;
-    align-items: center;
-    margin-top: 8px;
-}
-.telHead{
-    font-weight: 600;
-    font-size: 15px;
-    line-height: 19px;
-    color: #0F0F0F;
-    font-family: 'Futura PT Demi';
-}
-.telHead:hover{
-    text-decoration: none;
-    color: #6D8953;
-}
-.callback{
-    font-weight: 450;
-    font-size: 15px;
-    line-height: 19px;
-    color: #0F0F0F;
-    cursor: pointer;
-}
-.callback:hover{
-    color: #6D8953;
-}
-.haveChildren p{
-    cursor: pointer;
-}
-.haveChildren.active p{
-    border-bottom: 1px solid #6D8953;
-}
-.haveChildren:hover p{
-    border-bottom: 1px solid #6D8953;
-}
-.mainMenu .firstLevel:hover{
-    text-decoration: none;
-}
-.firstLevel.active{
-    border-bottom: 1px solid #6D8953;
 }
 .fadeForMenu{
     box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.2);
@@ -146,14 +52,14 @@ img{
 .container.__custom{
     margin-left: auto;
     margin-right: 0;
-    max-width: calc(1140px + ((100% - 1140px)/2));
+    max-width: calc(540px + ((100% - 540px)/2));
 }
 .homeTitle{
     text-transform: uppercase;
     font-weight: 600;
     color: #0F0F0F;
     line-height: 113.7%;
-    margin-top: 79px;
+    margin-top: 58px;
 }
 .chechly{
     font-size: 36px;
@@ -203,7 +109,7 @@ img{
 }
 .firstScreen__slider__rigth p{
     bottom: 0;
-    left: 150px;
+    left: 0;
 }
 .firstScreen__slider__left p{
     bottom: 0;
@@ -270,7 +176,7 @@ img{
     transform: rotate(45deg);
 }
 .goCatalog{
-    padding: 15px 54px;
+    padding: 12px 0;
     border-radius: 1000px;
     border: 2px solid #0F0F0F;
     font-weight: 600;
@@ -279,11 +185,182 @@ img{
     color: #0F0F0F;
     cursor: pointer;
     display: block;
-    max-width: max-content;
+    max-width: 100%;
+    text-align: center;
     margin: 54px 0 61px;
 }
 .goCatalog:hover{
     text-decoration: none;
     color: white;
     border: 2px solid transparent;
+}
+.lkHead{
+    width: 25px;
+    height: 25px;
+    background: url(../images/lk.png) center no-repeat;
+    display: block;
+    cursor: pointer;
+}
+.cart{
+    width: 25px;
+    height: 25px;
+    background: url(../images/card.png) center no-repeat;
+    display: block;
+    cursor: pointer;
+}
+.mobile__headrow{
+    margin: 23px 0;
+}
+.mobile__telHead{
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 21px;
+    color: #0F0F0F;
+    font-family: 'Futura PT Demi';
+    width: 100%;
+    text-align: end;
+    display: block;
+}
+.mobile__telHead:hover{
+    color: #6D8953;
+    text-decoration: none;
+}
+.mobile__headrow{
+    display: block;
+}
+.mobile__icon_link{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    padding-left: 67px;
+}
+.burgerButt{
+    width: 35px;
+    height: 24px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+    top: 24px;
+    cursor: pointer;
+    z-index: 10;
+}
+.burgerButt.activeBurger{
+    z-index: 1000;
+}
+.burgerButt span{
+    width: 100%;
+    height: 4px;
+    background-color: #0F0F0F;
+    transition: all .5s;
+}
+.burgerButt span:first-child {
+    transform-origin: 0% 0%;
+}
+.burgerButt span:last-child {
+    transform-origin: 0% 100%;
+}
+.burgerButt.activeBurger span:first-child {
+    transform: rotate(45deg) translate(-2px, 0px);
+}
+.burgerButt.activeBurger span:nth-child(2) {
+    opacity: 0;
+}
+.burgerButt.activeBurger span:last-child {
+    transform: rotate(-45deg) translate(-3px, 0px);
+}
+.mobile__menu{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 80vh;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    min-height: 90vh;
+    background: rgba(255, 255, 255, 0.97);
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: column;
+    align-items: center;
+    z-index: 989;
+    padding-top: 24px;
+    margin-top: 56px;
+    transform: translateX(-200%);
+    transition: all .5s;
+}
+.mobile__menu.active{
+    transform: none;
+}
+.mobile__menu ul{
+    padding-left: 0;
+}
+.callback{
+    padding-bottom: 10px;
+    border-bottom: 1px solid #0F0F0F;
+    cursor: pointer;
+    width: 100%;
+    max-width: max-content;
+    margin-left: auto;
+    margin-right: 15px;
+    padding-right: 40px;
+}
+.callback:hover{
+    border-bottom: 1px solid #6D8953;
+}
+.mobile__first,.mobile__first a{
+    font-weight: 450;
+    font-size: 25px;
+    line-height: 200.7%;
+    text-align: center;
+    color: #0F0F0F;
+    width: 100%;
+    list-style-type: none;
+    cursor: pointer;
+}
+.mobile__hasChild__head{
+    position: relative;
+}
+.mobile__hasChild__head::before{
+    content: '';
+    width: 9px;
+    height: 9px;
+    border-bottom: 1px solid #0F0F0F;
+    border-right: 1px solid #0F0F0F;
+    transform: rotate(-45deg);
+    position: absolute;
+    right: 0;
+    top: 21px;
+    transition: all .5s;
+}
+.mobile__hasChild__head.active::before{
+    transform: rotate(45deg);
+}
+.mobile__hasChild__body{
+    height: 0;
+    display: none;
+}
+.mobile__hasChild__body.active{
+    height: auto;
+    display: block;
+}
+.mobile__hasChild__body ul{
+    padding-left: 0;
+    margin-bottom: 15px;
+}
+.mobile__hasChild__body ul li{
+    list-style-type: none;
+    max-height: 30px;
+}
+.mobile__hasChild__body ul li a{
+    font-size: 18px;
+    line-height: 200.7%;
+    color: #0F0F0F;
+}
+.socLinks{
+    display: none;
 }
