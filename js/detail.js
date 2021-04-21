@@ -110,11 +110,11 @@ let filterDetailSlider = (function(material,color,coast){
 $('.razvernyt__head').on('click',function(){
     $('.razvernyt__body').toggleClass('active');
 });
-// $('.filter__slider').slick({
-//     arrow:false,
-//     dots:false,
-//     draggable:false,
-// })
+$('.filter__slider').slick({
+    arrow:false,
+    dots:false,
+    draggable:false,
+})
 $('.navForFiltersSlider').on('click',function(){
     $('.filter__slider').slick('slickGoTo',$(this).attr('data-slide'));
     $('.navForFiltersSlider').each(function(){
